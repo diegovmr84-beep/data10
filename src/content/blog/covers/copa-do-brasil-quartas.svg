@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- chave de mata-mata: dois confrontos convergindo para a semifinal -->
+  <g fill="none" stroke="#7686a8" stroke-opacity="0.45" stroke-width="2.5">
+    <path d="M 360 260 H 620"/>
+    <path d="M 360 400 H 620"/>
+    <path d="M 620 260 V 400"/>
+    <path d="M 620 330 H 800"/>
+
+    <path d="M 360 520 H 620"/>
+    <path d="M 360 660 H 620"/>
+    <path d="M 620 520 V 660"/>
+    <path d="M 620 590 H 800"/>
+
+    <path d="M 800 330 V 590"/>
+    <path d="M 800 460 H 1080"/>
+  </g>
+
+  <!-- pontos representando os quatro times de cada confronto -->
+  <g fill="#f4f6fa">
+    <circle cx="345" cy="260" r="10"/>
+    <circle cx="345" cy="400" r="10"/>
+    <circle cx="345" cy="520" r="10"/>
+    <circle cx="345" cy="660" r="10"/>
+  </g>
+
+  <g fill="#e57426">
+    <circle cx="800" cy="330" r="12"/>
+    <circle cx="800" cy="590" r="12"/>
+  </g>
+
+  <circle cx="1080" cy="460" r="18" fill="#e57426"/>
+  <ellipse cx="1080" cy="460" rx="46" ry="46" fill="none" stroke="#e57426" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- órbita externa sutil, referência ao torneio como um todo -->
+  <ellipse cx="900" cy="450" rx="520" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
