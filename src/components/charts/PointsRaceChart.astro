@@ -1,0 +1,101 @@
+---
+import { lookupTeamColor, pickDistinctColors, DEFAULT_FALLBACK_COLORS } from '../../lib/team-color';
+
+interface Props {
+  matchdays: number[];
+  series: Record<string, number[]>;
+  /** Times a destacar (ex: os 10 primeiros colocados atuais), na ordem desejada. */
+  highlightTeams: string[];
+}
+
+const { matchdays, series, highlightTeams } = Astro.props;
+
+const teamsInRace = highlightTeams.filter((team) => series[team]);
+
+// Cor de cada time: tenta a cor de identidade real (torcida/uniforme) — essa
+// nunca é alterada, mesmo que fique parecida com a de outro time (times reais
+// com cores próximas, ex: dois "vermelho e preto", contam com linhas finas no
+// gráfico para dar pra distinguir numa sobreposição). Sem cor conhecida, cai
+// numa cor de fallback, aí sim afastada de qualquer cor (real ou de fallback)
+// já usada por um time acima na prioridade, pra não coincidir por acaso.
+const rawColors = teamsInRace.map((team, index) => {
+  const known = lookupTeamColor(team);
+  return { hex: known ?? DEFAULT_FALLBACK_COLORS[index % DEFAULT_FALLBACK_COLORS.length], protect: known !== null };
+});
+const colors = pickDistinctColors(rawColors);
+
+const datasets = teamsInRace.map((team, index) => ({
+  team,
+  data: series[team],
+  color: colors[index],
+}));
+
+const chartData = JSON.stringify({ matchdays, datasets });
+---
+
+<div class="rounded-lg border border-ink-100 bg-white p-4 sm:p-6" data-chart="points-race" data-chart-payload={chartData}>
+  <canvas height="340" role="img" aria-label="Gráfico de linha mostrando a evolução acumulada de pontos dos times mais bem colocados ao longo das rodadas, cada linha na cor do time"></canvas>
+</div>
+
+<script>
+  import Chart from 'chart.js/auto';
+
+  function initWrapper(wrapper: HTMLElement) {
+    if (wrapper.dataset.chartInitialized === 'true') return;
+    const canvas = wrapper.querySelector('canvas');
+    const payload = wrapper.dataset.chartPayload;
+    if (!canvas || !payload) return;
+
+    const { matchdays, datasets } = JSON.parse(payload) as {
+      matchdays: number[];
+      datasets: { team: string; data: number[]; color: string }[];
+    };
+    if (matchdays.length === 0 || datasets.length === 0) return;
+
+    wrapper.dataset.chartInitialized = 'true';
+
+    new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: matchdays.map((m) => `R${m}`),
+        datasets: datasets.map((d) => ({
+          label: d.team,
+          data: d.data,
+          borderColor: d.color,
+          backgroundColor: d.color,
+          pointBackgroundColor: d.color,
+          pointBorderColor: d.color,
+          tension: 0.25,
+          pointRadius: 1.5,
+          pointHoverRadius: 4,
+          borderWidth: 1.5,
+        })),
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#101a30', font: { family: 'Inter' }, boxWidth: 12 } },
+        },
+        scales: {
+          x: { ticks: { color: '#3d517d' }, grid: { display: false } },
+          y: {
+            ticks: { color: '#3d517d' },
+            grid: { color: '#e6eaf3' },
+            title: { display: true, text: 'Pontos acumulados', color: '#3d517d' },
+          },
+        },
+      },
+    });
+  }
+
+  const wrappers = document.querySelectorAll<HTMLElement>('[data-chart="points-race"]');
+  for (const wrapper of wrappers) {
+    if (wrapper.offsetParent !== null) initWrapper(wrapper);
+  }
+
+  document.addEventListener('data10:panel-shown', (event) => {
+    const panel = event.target as HTMLElement;
+    panel.querySelectorAll<HTMLElement>('[data-chart="points-race"]').forEach(initWrapper);
+  });
+</script>
