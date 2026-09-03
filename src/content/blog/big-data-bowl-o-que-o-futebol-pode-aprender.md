@@ -1,7 +1,7 @@
 ---
 title: "O que o futebol pode aprender com o Big Data Bowl da NFL"
 description: "A NFL tem uma competição aberta de ciência de dados que já colocou estudantes para trabalhar em times da liga. O futebol tem um ecossistema de dados abertos mais rico do que parece — mas falta algo parecido com isso, especialmente no Brasil."
-pubDate: 2026-09-04
+pubDate: 2026-09-03
 author: "Redação Data10"
 category: "Tecnologia e Dados"
 tags: ["Big Data Bowl", "NFL", "Dados Abertos", "Carreira em Dados", "CBF"]
