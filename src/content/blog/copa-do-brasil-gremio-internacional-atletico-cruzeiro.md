@@ -1,7 +1,7 @@
 ---
 title: "Copa do Brasil: Atlético-MG já está na semifinal, e o Gre-Nal decide o último classificado hoje"
 description: "Análise com números do 2 a 1 do Atlético-MG sobre o Cruzeiro e prévia com probabilidades para Grêmio x Internacional, o Gre-Nal que fecha as quartas de final da Copa do Brasil."
-pubDate: 2026-09-03
+pubDate: 2026-09-03T10:50:00Z
 author: "Redação Data10"
 category: "Grandes Eventos"
 tags: ["Copa do Brasil", "Grêmio", "Internacional", "Atlético-MG", "Cruzeiro", "Win Probability"]

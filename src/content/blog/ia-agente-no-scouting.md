@@ -1,7 +1,7 @@
 ---
 title: "IA agente no scouting: como funciona a nova caça a talentos"
 description: "Entenda o que é IA agente e como plataformas como Football AI Pro e SICS Atlas usam múltiplos agentes de IA para automatizar o scouting de jogadores no futebol."
-pubDate: 2026-09-03
+pubDate: 2026-09-03T23:36:00Z
 author: "Redação Data10"
 category: "Scouting"
 tags: ["Inteligência Artificial", "IA Agente", "Scouting", "Machine Learning"]
