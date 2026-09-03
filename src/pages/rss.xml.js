@@ -1,11 +1,10 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { comparePostsByDateDesc } from '../lib/blog-sort';
 
 // Feed RSS do blog em PT (idioma com conteúdo completo publicado por enquanto).
 export async function GET(context) {
-  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  );
+  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(comparePostsByDateDesc);
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   return rss({

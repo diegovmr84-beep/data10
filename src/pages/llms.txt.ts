@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { comparePostsByDateDesc } from '../lib/blog-sort';
 
 // Índice do site em Markdown, seguindo a convenção emergente llms.txt
 // (https://llmstxt.org/) — ajuda ferramentas de IA que navegam a web em
@@ -10,9 +11,7 @@ export async function GET(context) {
   const site = context.site?.toString().replace(/\/$/, '') ?? '';
   const url = (path: string) => `${site}${base}${path}`;
 
-  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  );
+  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(comparePostsByDateDesc);
   const terms = (await getCollection('glossario')).sort((a, b) => a.data.term.localeCompare(b.data.term, 'pt'));
 
   const lines: string[] = [];
