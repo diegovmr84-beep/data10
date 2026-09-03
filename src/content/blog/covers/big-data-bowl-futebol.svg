@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- duas bolas estilizadas (futebol americano e futebol) conectadas por um fluxo de dados -->
+  <g transform="translate(430,450)">
+    <ellipse rx="120" ry="76" fill="none" stroke="#7686a8" stroke-opacity="0.55" stroke-width="3"/>
+    <line x1="-70" y1="0" x2="70" y2="0" stroke="#7686a8" stroke-opacity="0.55" stroke-width="2.5"/>
+    <line x1="-24" y1="-18" x2="-24" y2="18" stroke="#7686a8" stroke-opacity="0.55" stroke-width="2"/>
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#7686a8" stroke-opacity="0.55" stroke-width="2"/>
+    <line x1="24" y1="-18" x2="24" y2="18" stroke="#7686a8" stroke-opacity="0.55" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(1170,450)">
+    <circle r="92" fill="none" stroke="#e57426" stroke-width="3"/>
+    <path d="M 0 -92 L 27 -55 L 17 -8 L -17 -8 L -27 -55 Z" fill="none" stroke="#e57426" stroke-width="2.5"/>
+    <path d="M 0 92 L 27 55 M 0 92 L -27 55" fill="none" stroke="#e57426" stroke-width="2.5"/>
+    <path d="M -92 0 L -55 -27 M -92 0 L -55 27" fill="none" stroke="#e57426" stroke-width="2.5"/>
+    <path d="M 92 0 L 55 -27 M 92 0 L 55 27" fill="none" stroke="#e57426" stroke-width="2.5"/>
+  </g>
+
+  <!-- fluxo de dados entre as duas bolas -->
+  <g fill="none" stroke="#e6eaf3" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round">
+    <path d="M 560 430 C 750 360, 850 360, 1040 430"/>
+    <path d="M 560 470 C 750 540, 850 540, 1040 470"/>
+  </g>
+  <g fill="#f4f6fa">
+    <circle cx="700" cy="392" r="5"/>
+    <circle cx="900" cy="392" r="5"/>
+    <circle cx="700" cy="508" r="5"/>
+    <circle cx="900" cy="508" r="5"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="560" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
