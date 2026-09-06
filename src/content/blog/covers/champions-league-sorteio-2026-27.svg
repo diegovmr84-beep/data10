@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- quatro potes estilizados como colunas de círculos -->
+  <g fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2">
+    <rect x="330" y="220" width="180" height="460" rx="16"/>
+    <rect x="570" y="220" width="180" height="460" rx="16"/>
+    <rect x="850" y="220" width="180" height="460" rx="16"/>
+    <rect x="1090" y="220" width="180" height="460" rx="16"/>
+  </g>
+
+  <!-- pote 1: destaque desigual (alguns times muito mais fortes que outros) -->
+  <circle cx="420" cy="280" r="16" fill="#e57426"/>
+  <circle cx="420" cy="340" r="16" fill="#e57426"/>
+  <circle cx="420" cy="400" r="13" fill="#7686a8" fill-opacity="0.6"/>
+  <circle cx="420" cy="450" r="13" fill="#7686a8" fill-opacity="0.6"/>
+  <circle cx="420" cy="500" r="11" fill="#4a6fa5" fill-opacity="0.55"/>
+  <circle cx="420" cy="545" r="11" fill="#4a6fa5" fill-opacity="0.55"/>
+  <circle cx="420" cy="590" r="9" fill="#4a6fa5" fill-opacity="0.4"/>
+  <circle cx="420" cy="630" r="9" fill="#4a6fa5" fill-opacity="0.4"/>
+
+  <!-- potes 2, 3, 4: mais uniformes -->
+  <g fill="#7686a8" fill-opacity="0.5">
+    <circle cx="660" cy="290" r="11"/><circle cx="660" cy="340" r="11"/><circle cx="660" cy="390" r="11"/>
+    <circle cx="660" cy="440" r="11"/><circle cx="660" cy="490" r="11"/><circle cx="660" cy="540" r="11"/>
+    <circle cx="660" cy="590" r="11"/><circle cx="660" cy="630" r="11"/><circle cx="660" cy="660" r="11"/>
+  </g>
+  <g fill="#7686a8" fill-opacity="0.4">
+    <circle cx="940" cy="290" r="10"/><circle cx="940" cy="335" r="10"/><circle cx="940" cy="380" r="10"/>
+    <circle cx="940" cy="425" r="10"/><circle cx="940" cy="470" r="10"/><circle cx="940" cy="515" r="10"/>
+    <circle cx="940" cy="560" r="10"/><circle cx="940" cy="605" r="10"/><circle cx="940" cy="645" r="10"/>
+  </g>
+  <g fill="#7686a8" fill-opacity="0.3">
+    <circle cx="1180" cy="290" r="9"/><circle cx="1180" cy="330" r="9"/><circle cx="1180" cy="370" r="9"/>
+    <circle cx="1180" cy="410" r="9"/><circle cx="1180" cy="450" r="9"/><circle cx="1180" cy="490" r="9"/>
+    <circle cx="1180" cy="530" r="9"/><circle cx="1180" cy="570" r="9"/><circle cx="1180" cy="610" r="9"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="580" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
