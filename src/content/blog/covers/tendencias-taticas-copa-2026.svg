@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- três ícones representando as três tendências, dispostos em linha -->
+
+  <!-- 1: contrapressão (dois jogadores convergindo rápido sobre a bola) -->
+  <g transform="translate(420,450)">
+    <circle r="10" fill="#e57426"/>
+    <path d="M -110 -70 L -20 -10" fill="none" stroke="#f4f6fa" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -110 70 L -20 10" fill="none" stroke="#f4f6fa" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="-110" cy="-70" r="9" fill="none" stroke="#7686a8" stroke-width="2.5"/>
+    <circle cx="-110" cy="70" r="9" fill="none" stroke="#7686a8" stroke-width="2.5"/>
+  </g>
+
+  <!-- 2: impacto dos suplentes (seta entrando do banco) -->
+  <g transform="translate(800,450)">
+    <rect x="-90" y="-8" width="180" height="16" rx="8" fill="none" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M 0 -60 L 0 -18" fill="none" stroke="#e57426" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M -14 -34 L 0 -18 L 14 -34" fill="none" stroke="#e57426" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="-78" r="10" fill="#e57426"/>
+  </g>
+
+  <!-- 3: goleiro articulador (linhas de distribuição saindo de um ponto) -->
+  <g transform="translate(1180,450)">
+    <circle r="11" fill="none" stroke="#f4f6fa" stroke-width="3"/>
+    <path d="M 0 0 L 90 -50 M 0 0 L 100 10 M 0 0 L 80 60" fill="none" stroke="#7686a8" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="580" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
