@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- lado esquerdo: descoberta de talento (vídeo -> IA -> jogador) -->
+  <g transform="translate(430,450)">
+    <rect x="-90" y="-60" width="180" height="120" rx="10" fill="none" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2.5"/>
+    <path d="M -20 -25 L 30 0 L -20 25 Z" fill="#7686a8" fill-opacity="0.5"/>
+    <path d="M 0 90 L 0 140" fill="none" stroke="#e57426" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -14 116 L 0 140 L 14 116" fill="none" stroke="#e57426" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="180" r="14" fill="none" stroke="#f4f6fa" stroke-width="3"/>
+    <circle cx="0" cy="164" r="7" fill="#f4f6fa"/>
+  </g>
+
+  <!-- lado direito: tática em tempo real (campo + previsão de jogada) -->
+  <g transform="translate(1050,450)">
+    <rect x="-110" y="-70" width="220" height="140" rx="8" fill="none" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2.5"/>
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#7686a8" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="-40" cy="-20" r="7" fill="#f4f6fa"/>
+    <circle cx="10" cy="20" r="7" fill="#f4f6fa"/>
+    <circle cx="60" cy="-30" r="7" fill="#f4f6fa"/>
+    <path d="M -40 -20 L 10 20" fill="none" stroke="#e57426" stroke-width="2" stroke-dasharray="2 6"/>
+    <path d="M 10 20 L 60 -30" fill="none" stroke="#e57426" stroke-width="2" stroke-dasharray="2 6"/>
+  </g>
+
+  <!-- linha central conectando os dois pólos -->
+  <path d="M 620 450 L 830 450" fill="none" stroke="#e6eaf3" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="2 10"/>
+
+  <ellipse cx="800" cy="450" rx="580" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
