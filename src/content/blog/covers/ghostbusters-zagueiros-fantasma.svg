@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- campo com linhas de jarda, referência ao futebol americano -->
+  <g stroke="#7686a8" stroke-opacity="0.18" stroke-width="2">
+    <line x1="80" y1="620" x2="1520" y2="620"/>
+    <line x1="240" y1="560" x2="240" y2="680"/>
+    <line x1="480" y1="560" x2="480" y2="680"/>
+    <line x1="720" y1="560" x2="720" y2="680"/>
+    <line x1="960" y1="560" x2="960" y2="680"/>
+    <line x1="1200" y1="560" x2="1200" y2="680"/>
+    <line x1="1440" y1="560" x2="1440" y2="680"/>
+  </g>
+
+  <!-- zagueiro real, sólido -->
+  <g transform="translate(660,430)" fill="none" stroke="#f4f6fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-96" r="26"/>
+    <path d="M -34 -50 L 34 -50 L 44 60 L 10 60 L 4 6 L -4 6 L -10 60 L -44 60 Z"/>
+  </g>
+
+  <!-- zagueiro-fantasma, contracounterfactual, tracejado -->
+  <g transform="translate(860,370)" fill="none" stroke="#e57426" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 10" opacity="0.85">
+    <circle cx="0" cy="-96" r="26"/>
+    <path d="M -34 -50 L 34 -50 L 44 60 L 10 60 L 4 6 L -4 6 L -10 60 L -44 60 Z"/>
+  </g>
+
+  <!-- trajetória da bola no ar -->
+  <g fill="none" stroke="#e6eaf3" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="2 10">
+    <path d="M 520 250 Q 800 120 1080 300"/>
+  </g>
+  <ellipse cx="1080" cy="300" rx="16" ry="11" fill="#f4f6fa" opacity="0.75" transform="rotate(24 1080 300)"/>
+
+  <!-- nuvem de probabilidade / pitch control em torno do fantasma -->
+  <ellipse cx="860" cy="410" rx="130" ry="100" fill="none" stroke="#e57426" stroke-opacity="0.22" stroke-width="2"/>
+  <ellipse cx="860" cy="410" rx="190" ry="150" fill="none" stroke="#e57426" stroke-opacity="0.12" stroke-width="2"/>
+
+  <ellipse cx="800" cy="450" rx="580" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
