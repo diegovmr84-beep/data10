@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- bola com quatro paineis -->
+  <g transform="translate(800,450)">
+    <circle r="170" fill="none" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+    <!-- divisao dos 4 paineis -->
+    <path d="M -170 0 A 170 170 0 0 1 0 -170" fill="none" stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M 0 -170 A 170 170 0 0 1 170 0" fill="none" stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M 170 0 A 170 170 0 0 1 0 170" fill="none" stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M 0 170 A 170 170 0 0 1 -170 0" fill="none" stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="2"/>
+
+    <!-- painel com o sensor, em destaque -->
+    <path d="M 0 0 L 0 -170 A 170 170 0 0 1 170 0 Z" fill="#e57426" fill-opacity="0.16"/>
+    <circle cx="85" cy="-85" r="10" fill="#e57426"/>
+
+    <!-- contrapesos nos outros tres paineis -->
+    <circle cx="-85" cy="-85" r="5" fill="#7686a8"/>
+    <circle cx="-85" cy="85" r="5" fill="#7686a8"/>
+    <circle cx="85" cy="85" r="5" fill="#7686a8"/>
+  </g>
+
+  <!-- ondas de sinal saindo da bola -->
+  <g fill="none" stroke="#e57426" stroke-opacity="0.5" stroke-width="2">
+    <path d="M 900 350 a 60 60 0 0 1 40 40"/>
+    <path d="M 940 310 a 115 115 0 0 1 75 75"/>
+    <path d="M 980 270 a 175 175 0 0 1 110 110"/>
+  </g>
+
+  <!-- antena no topo, referencia ao estadio -->
+  <g transform="translate(1180,220)" stroke="#7686a8" stroke-opacity="0.6" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="70"/>
+    <line x1="-28" y1="14" x2="0" y2="0"/>
+    <line x1="28" y1="14" x2="0" y2="0"/>
+  </g>
+
+  <text x="1120" y="480" font-family="Georgia, serif" font-size="26" fill="#e6eaf3" fill-opacity="0.55">500 Hz</text>
+
+  <ellipse cx="800" cy="450" rx="600" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
