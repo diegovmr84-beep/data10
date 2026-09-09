@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- cordilheira estilizada, referência à altitude de Quito -->
+  <g fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="3" stroke-linejoin="round">
+    <path d="M 120 560 L 320 300 L 470 460 L 640 220 L 830 560"/>
+    <path d="M 700 560 L 900 340 L 1060 500 L 1260 260 L 1480 560" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- linha de altitude, tracejada, com marcação -->
+  <line x1="80" y1="380" x2="1520" y2="380" stroke="#e57426" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="3 10"/>
+  <text x="1120" y="368" font-family="Georgia, serif" font-size="26" fill="#e57426" fill-opacity="0.75">2.850m</text>
+
+  <!-- bola subindo a encosta -->
+  <circle cx="470" cy="460" r="20" fill="#f4f6fa" fill-opacity="0.9"/>
+  <path d="M 470 448 l 6 8 l -6 8 l -6 -8 Z" fill="#101a30" fill-opacity="0.5"/>
+
+  <!-- dois marcadores de placar, referência aos dois jogos de hoje -->
+  <g transform="translate(300,700)" font-family="Georgia, serif" fill="#e6eaf3">
+    <circle r="5" fill="#e57426"/>
+    <text x="20" y="8" font-size="30" fill-opacity="0.85">19h</text>
+  </g>
+  <g transform="translate(1180,700)" font-family="Georgia, serif" fill="#e6eaf3">
+    <circle r="5" fill="#e57426"/>
+    <text x="20" y="8" font-size="30" fill-opacity="0.85">21h30</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="620" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
