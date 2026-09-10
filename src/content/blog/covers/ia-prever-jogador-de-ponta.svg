@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- cinco modelos convergindo para uma nota combinada -->
+  <g stroke="#7686a8" stroke-opacity="0.45" stroke-width="2">
+    <line x1="380" y1="260" x2="800" y2="460"/>
+    <line x1="380" y1="400" x2="800" y2="460"/>
+    <line x1="380" y1="540" x2="800" y2="460"/>
+    <line x1="380" y1="660" x2="800" y2="460"/>
+    <line x1="480" y1="180" x2="800" y2="460"/>
+  </g>
+
+  <g fill="none" stroke="#f4f6fa" stroke-opacity="0.6" stroke-width="3">
+    <circle cx="380" cy="260" r="26"/>
+    <circle cx="380" cy="400" r="26"/>
+    <circle cx="380" cy="540" r="26"/>
+    <circle cx="380" cy="660" r="26"/>
+    <circle cx="480" cy="180" r="26"/>
+  </g>
+
+  <!-- nota combinada final -->
+  <circle cx="800" cy="460" r="70" fill="none" stroke="#e57426" stroke-width="5"/>
+  <circle cx="800" cy="460" r="46" fill="#e57426" fill-opacity="0.15"/>
+
+  <!-- estrela discreta dentro do circulo, referencia a "jogador de ponta" -->
+  <path d="M 800 428 L 809 452 L 835 452 L 814 468 L 822 492 L 800 477 L 778 492 L 786 468 L 765 452 L 791 452 Z"
+        fill="#f4f6fa" fill-opacity="0.8"/>
+
+  <!-- seta de saida para a direita, indicando previsao -->
+  <g stroke="#e57426" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="900" y1="460" x2="1080" y2="460"/>
+    <path d="M 1060 442 L 1084 460 L 1060 478"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="600" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
