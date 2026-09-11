@@ -1,5 +1,5 @@
 ---
-title: "Como funciona o Fokus: o método do Bodø/Glimt, explicado para outros clubes"
+title: "Como funciona o Fokus: o método do Bodø/Glimt, explicado"
 description: "O Fokus nasceu como ferramenta interna do Bodø/Glimt e hoje é usado por mais de 50 clubes, de segunda divisão a times de Champions League. Detalhamos as três camadas do método — squad planning, ranking por IA e financeiro — para clubes que querem entender a lógica."
 pubDate: 2026-09-11T13:00:00Z
 author: "Redação Data10"
