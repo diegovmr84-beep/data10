@@ -2,8 +2,8 @@
 term: "Controle de Espaço (Voronoi)"
 shortDefinition: "Divisão do campo em zonas de domínio de cada jogador, calculada por diagramas de Voronoi — mostra quem controla qual parte do gramado a cada instante."
 category: "Táticas"
-relatedPosts: ["controle-de-espaco-voronoi", "visao-computacional-tracking-data"]
-relatedTerms: ["tracking-data", "xt", "redes-de-passe"]
+relatedPosts: ["controle-de-espaco-voronoi", "visao-computacional-tracking-data", "ghostbusters-zagueiros-fantasma-big-data-bowl"]
+relatedTerms: ["tracking-data", "xt", "redes-de-passe", "pitch-control"]
 ---
 
 **Controle de espaço** (ou *space control*) é a divisão do campo em regiões de domínio de cada jogador, calculada por um **diagrama de Voronoi**: cada região representa a área do gramado que está mais perto daquele jogador específico do que de qualquer outro em campo.

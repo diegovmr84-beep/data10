@@ -2,8 +2,8 @@
 term: "Bio-banding"
 shortDefinition: "Agrupar atletas jovens por estágio de maturação biológica (não por idade cronológica) para tornar treinos, avaliações e seleção mais justos."
 category: "Scouting"
-relatedPosts: ["categorias-de-base-gestao-de-dados", "machine-learning-scouting"]
-relatedTerms: ["scouting-orientado-por-dados", "acwr"]
+relatedPosts: ["categorias-de-base-gestao-de-dados", "machine-learning-scouting", "somatotipo-scouting-biotipo"]
+relatedTerms: ["scouting-orientado-por-dados", "acwr", "somatotipo"]
 ---
 
 **Bio-banding** é o método de agrupar atletas jovens por estágio de **maturação biológica** — não por idade cronológica — para treinos, avaliações técnicas e, em alguns casos, competições específicas dentro das categorias de base.
