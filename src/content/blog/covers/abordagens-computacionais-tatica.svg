@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- ciclo de quatro fases do jogo -->
+  <g transform="translate(800,450)">
+    <circle r="220" fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="1 10"/>
+
+    <!-- quatro nos representando IP, OOP, ADT, DAT -->
+    <g fill="none" stroke="#f4f6fa" stroke-opacity="0.75" stroke-width="4">
+      <circle cx="0" cy="-220" r="30"/>
+      <circle cx="220" cy="0" r="30"/>
+      <circle cx="0" cy="220" r="30"/>
+      <circle cx="-220" cy="0" r="30"/>
+    </g>
+
+    <!-- setas de ciclo entre os nos -->
+    <g stroke="#e57426" stroke-opacity="0.55" stroke-width="3" fill="none">
+      <path d="M 28 -215 A 220 220 0 0 1 215 -28"/>
+      <path d="M 215 28 A 220 220 0 0 1 28 215"/>
+      <path d="M -28 215 A 220 220 0 0 1 -215 28"/>
+      <path d="M -215 -28 A 220 220 0 0 1 -28 -215"/>
+    </g>
+
+    <!-- centro: hub de dado -->
+    <circle r="46" fill="#e57426" fill-opacity="0.16" stroke="#e57426" stroke-width="4"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="600" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
