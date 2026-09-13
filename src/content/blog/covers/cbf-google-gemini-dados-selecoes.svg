@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- documentos espalhados convergindo -->
+  <g stroke="#7686a8" stroke-opacity="0.5" stroke-width="2" fill="none">
+    <rect x="330" y="260" width="70" height="90" rx="4" transform="rotate(-12 365 305)"/>
+    <rect x="330" y="420" width="70" height="90" rx="4" transform="rotate(8 365 465)"/>
+    <rect x="330" y="580" width="70" height="90" rx="4" transform="rotate(-6 365 625)"/>
+  </g>
+  <g stroke="#7686a8" stroke-opacity="0.35" stroke-width="1.5">
+    <line x1="400" y1="300" x2="720" y2="440"/>
+    <line x1="400" y1="465" x2="720" y2="455"/>
+    <line x1="400" y1="620" x2="720" y2="470"/>
+  </g>
+
+  <!-- nuvem/base central -->
+  <g transform="translate(820,450)">
+    <path d="M -140 20 a 70 70 0 0 1 10 -139 a 90 90 0 0 1 170 -10 a 70 70 0 0 1 20 139 Z"
+          fill="none" stroke="#f4f6fa" stroke-opacity="0.75" stroke-width="4"/>
+  </g>
+
+  <!-- balao de conversa, interface conversacional -->
+  <g transform="translate(1130,340)" fill="none" stroke="#e57426" stroke-width="4">
+    <rect x="-90" y="-56" width="180" height="110" rx="18"/>
+    <path d="M -30 54 L -50 84 L -10 54 Z" fill="#e57426" fill-opacity="0.16"/>
+  </g>
+  <g transform="translate(1130,340)" fill="#e57426" fill-opacity="0.7">
+    <circle cx="-36" cy="-2" r="7"/>
+    <circle cx="0" cy="-2" r="7"/>
+    <circle cx="36" cy="-2" r="7"/>
+  </g>
+
+  <line x1="960" y1="410" x2="1060" y2="370" stroke="#e57426" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="2 8"/>
+
+  <ellipse cx="800" cy="450" rx="620" ry="420" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
