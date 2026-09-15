@@ -2,8 +2,8 @@
 term: "Bio-banding"
 shortDefinition: "Agrupar atletas jovens por estágio de maturação biológica (não por idade cronológica) para tornar treinos, avaliações e seleção mais justos."
 category: "Scouting"
-relatedPosts: ["categorias-de-base-gestao-de-dados", "machine-learning-scouting", "somatotipo-scouting-biotipo"]
-relatedTerms: ["scouting-orientado-por-dados", "acwr", "somatotipo"]
+relatedPosts: ["categorias-de-base-gestao-de-dados", "machine-learning-scouting", "somatotipo-scouting-biotipo", "bio-banding-maturidade-biologica-categorias-base"]
+relatedTerms: ["scouting-orientado-por-dados", "acwr", "somatotipo", "maturity-offset"]
 ---
 
 **Bio-banding** é o método de agrupar atletas jovens por estágio de **maturação biológica** — não por idade cronológica — para treinos, avaliações técnicas e, em alguns casos, competições específicas dentro das categorias de base.
@@ -16,4 +16,4 @@ Atletas da mesma idade cronológica podem estar em estágios de desenvolvimento 
 
 Estudos mostram viés de seleção a favor de atletas de maturação precoce a partir da categoria sub-12 — e, paradoxalmente, pesquisas de longo prazo encontram que atletas de maturação **tardia** têm maior probabilidade de alcançar o nível profissional de elite, justamente o perfil mais descartado pelos critérios tradicionais. Levantamentos recentes indicam que comparar dados de teste dentro de grupos organizados por bio-banding reduz esse viés de seleção contra atletas de maturação tardia em cerca de 28%.
 
-Veja a explicação completa e o contexto de gestão de categorias de base no artigo [Categorias de base: por que a gestão de dados ainda é o ponto cego dos clubes brasileiros](/pt/blog/categorias-de-base-gestao-de-dados/).
+Veja o contexto de gestão de categorias de base no artigo [Categorias de base: por que a gestão de dados ainda é o ponto cego dos clubes brasileiros](/pt/blog/categorias-de-base-gestao-de-dados/), e a métrica usada para medir maturação — o [maturity offset](/pt/glossario/maturity-offset/) — e a evidência mais recente sobre o método no post [Bio-banding: como a idade biológica está corrigindo um viés antigo nas categorias de base](/pt/blog/bio-banding-maturidade-biologica-categorias-base/).
