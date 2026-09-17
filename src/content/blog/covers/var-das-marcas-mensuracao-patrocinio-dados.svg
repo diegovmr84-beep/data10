@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- quadro de transmissao -->
+  <rect x="380" y="260" width="840" height="420" rx="14" fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="3"/>
+
+  <!-- "campo" simplificado dentro do quadro -->
+  <line x1="380" y1="580" x2="1220" y2="580" stroke="#7686a8" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- placas de patrocinio ao longo da linha, uma destacada -->
+  <g>
+    <rect x="440" y="555" width="90" height="30" rx="4" fill="#7686a8" fill-opacity="0.4"/>
+    <rect x="560" y="555" width="90" height="30" rx="4" fill="#e57426" fill-opacity="0.9"/>
+    <rect x="680" y="555" width="90" height="30" rx="4" fill="#7686a8" fill-opacity="0.4"/>
+    <rect x="800" y="555" width="90" height="30" rx="4" fill="#7686a8" fill-opacity="0.4"/>
+    <rect x="920" y="555" width="90" height="30" rx="4" fill="#7686a8" fill-opacity="0.4"/>
+    <rect x="1040" y="555" width="90" height="30" rx="4" fill="#7686a8" fill-opacity="0.4"/>
+  </g>
+
+  <!-- mira/lente destacando a placa laranja, com "cronometro" -->
+  <circle cx="605" cy="570" r="70" fill="none" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+  <line x1="605" y1="500" x2="605" y2="515" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+  <line x1="605" y1="625" x2="605" y2="640" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+  <line x1="535" y1="570" x2="550" y2="570" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+  <line x1="660" y1="570" x2="675" y2="570" stroke="#f4f6fa" stroke-opacity="0.7" stroke-width="3"/>
+
+  <text x="800" y="770" text-anchor="middle" fill="#e6eaf3" fill-opacity="0.4" font-family="sans-serif" font-size="26" letter-spacing="1">39,38 min</text>
+
+  <ellipse cx="800" cy="450" rx="660" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
