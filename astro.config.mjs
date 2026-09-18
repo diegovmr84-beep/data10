@@ -32,7 +32,23 @@ export default defineConfig({
     '/': `${baseForPaths}/pt/`,
   },
 
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      // Exclui do sitemap as páginas em EN/ES que ainda são só "tradução
+      // pendente" (mesmas marcadas noIndex nos layouts) — hoje só a página
+      // de dashboards tem conteúdo real traduzido nesses dois idiomas.
+      // Página noindex listada no sitemap é sinal de conteúdo raso/site mal
+      // cuidado para o Google, e foi um dos motivos citados na recusa do
+      // AdSense por "conteúdo de baixo valor".
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        const isStubLocale = path.startsWith(`${baseForPaths}/en/`) || path.startsWith(`${baseForPaths}/es/`);
+        const isTranslatedSection = path.includes('/dashboards/');
+        return !isStubLocale || isTranslatedSection;
+      },
+    }),
+  ],
 
   image: {
     // As capas dos posts são SVG autorais (não vêm de usuários/fontes
