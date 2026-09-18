@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- campo elíptico visto de cima, simplificado -->
+  <ellipse cx="800" cy="480" rx="340" ry="230" fill="none" stroke="#7686a8" stroke-opacity="0.3" stroke-width="2"/>
+
+  <!-- suportes com smartphones ao redor do campo -->
+  <g>
+    <!-- gera 12 suportes em posicoes ao redor da elipse -->
+    <g fill="#f4f6fa" fill-opacity="0.85">
+      <rect x="790" y="220" width="20" height="34" rx="4"/>
+      <rect x="1000" y="270" width="20" height="34" rx="4" transform="rotate(35 1010 287)"/>
+      <rect x="1120" y="420" width="20" height="34" rx="4" transform="rotate(75 1130 437)"/>
+      <rect x="1120" y="540" width="20" height="34" rx="4" transform="rotate(105 1130 557)"/>
+      <rect x="1000" y="680" width="20" height="34" rx="4" transform="rotate(145 1010 697)"/>
+      <rect x="790" y="726" width="20" height="34" rx="4" transform="rotate(180 800 743)"/>
+      <rect x="580" y="680" width="20" height="34" rx="4" transform="rotate(215 590 697)"/>
+      <rect x="460" y="540" width="20" height="34" rx="4" transform="rotate(255 470 557)"/>
+      <rect x="460" y="420" width="20" height="34" rx="4" transform="rotate(285 470 437)"/>
+      <rect x="580" y="270" width="20" height="34" rx="4" transform="rotate(325 590 287)"/>
+    </g>
+  </g>
+
+  <!-- linhas de captacao convergindo para o centro -->
+  <g stroke="#e57426" stroke-opacity="0.35" stroke-width="1.5">
+    <line x1="800" y1="254" x2="800" y2="480"/>
+    <line x1="1130" y1="437" x2="800" y2="480"/>
+    <line x1="1130" y1="557" x2="800" y2="480"/>
+    <line x1="800" y1="726" x2="800" y2="480"/>
+    <line x1="470" y1="557" x2="800" y2="480"/>
+    <line x1="470" y1="437" x2="800" y2="480"/>
+  </g>
+
+  <!-- silhueta central representando a linha de impedimento -->
+  <line x1="700" y1="400" x2="700" y2="560" stroke="#f4f6fa" stroke-opacity="0.5" stroke-width="3" stroke-dasharray="6 8"/>
+  <circle cx="700" cy="440" r="8" fill="#e57426"/>
+  <circle cx="760" cy="500" r="8" fill="#7686a8"/>
+
+  <ellipse cx="800" cy="450" rx="660" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
