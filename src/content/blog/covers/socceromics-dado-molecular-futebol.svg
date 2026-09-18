@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- dupla helice estilizada -->
+  <g transform="translate(560,450)" stroke-linecap="round">
+    <path d="M -60 -280 C 60 -220, -60 -160, 60 -100 C -60 -40, 60 20, -60 80 C 60 140, -60 200, 60 260"
+          fill="none" stroke="#7686a8" stroke-opacity="0.55" stroke-width="4"/>
+    <path d="M 60 -280 C -60 -220, 60 -160, -60 -100 C 60 -40, -60 20, 60 80 C -60 140, 60 200, -60 260"
+          fill="none" stroke="#e57426" stroke-opacity="0.7" stroke-width="4"/>
+    <g stroke="#f4f6fa" stroke-opacity="0.25" stroke-width="2">
+      <line x1="-48" y1="-244" x2="48" y2="-244"/>
+      <line x1="-48" y1="-172" x2="48" y2="-172"/>
+      <line x1="-48" y1="-100" x2="48" y2="-100"/>
+      <line x1="-48" y1="-28" x2="48" y2="-28"/>
+      <line x1="-48" y1="44" x2="48" y2="44"/>
+      <line x1="-48" y1="116" x2="48" y2="116"/>
+      <line x1="-48" y1="188" x2="48" y2="188"/>
+      <line x1="-48" y1="260" x2="48" y2="260"/>
+    </g>
+  </g>
+
+  <!-- icones representando proteina, metabolito, microbioma a direita -->
+  <g fill="none" stroke="#f4f6fa" stroke-opacity="0.6" stroke-width="3">
+    <circle cx="1120" cy="290" r="34"/>
+    <path d="M 1100 290 Q 1120 270 1140 290 Q 1120 310 1100 290 Z"/>
+  </g>
+  <g fill="none" stroke="#f4f6fa" stroke-opacity="0.6" stroke-width="3">
+    <polygon points="1120,410 1150,430 1150,470 1120,490 1090,470 1090,430"/>
+  </g>
+  <g fill="none" stroke="#f4f6fa" stroke-opacity="0.6" stroke-width="3">
+    <path d="M 1090 570 Q 1105 550 1120 570 Q 1135 550 1150 570 Q 1145 600 1120 605 Q 1095 600 1090 570 Z"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="660" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
