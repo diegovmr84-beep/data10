@@ -20,6 +20,14 @@ interface Props {
   articlePublishedTime?: string;
   articleModifiedTime?: string;
   articleAuthor?: string;
+  // Idiomas em que esta MESMA página (mesmo path) realmente existe. Por
+  // padrão assume que existe nos três (caso das páginas institucionais,
+  // replicadas em pt/en/es). Posts de blog, verbetes de glossário e outras
+  // páginas geradas só em PT devem passar `translatedLangs={['pt']}` —
+  // caso contrário o hreflang aponta para uma URL que nunca existiu
+  // (ex: /en/blog/<slug>/ quando só a versão em pt daquele post existe),
+  // o que o Google Search Console sinaliza como erro de hreflang.
+  translatedLangs?: Lang[];
 }
 
 const {
@@ -34,6 +42,7 @@ const {
   articlePublishedTime,
   articleModifiedTime,
   articleAuthor,
+  translatedLangs = Object.keys(languages) as Lang[],
 } = Astro.props;
 
 const siteName = 'Data10';
@@ -74,18 +83,20 @@ const ogImageHeight = image ? (imageHeight ?? 630) : ogDefaultPng.attributes.hei
 
     {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
-    {Object.keys(languages).map((code) => (
+    {translatedLangs.map((code) => (
       <link
         rel="alternate"
         hreflang={code}
         href={new URL(`${base}/${code}${pathWithoutLangAndBase}`, Astro.site).toString()}
       />
     ))}
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={new URL(`${base}/pt${pathWithoutLangAndBase}`, Astro.site).toString()}
-    />
+    {translatedLangs.includes('pt') && (
+      <link
+        rel="alternate"
+        hreflang="x-default"
+        href={new URL(`${base}/pt${pathWithoutLangAndBase}`, Astro.site).toString()}
+      />
+    )}
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
