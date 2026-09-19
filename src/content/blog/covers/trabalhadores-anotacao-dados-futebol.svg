@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- um lance de futebol central (bola + linha de jogada) -->
+  <circle cx="800" cy="300" r="22" fill="#e57426"/>
+  <path d="M 700 340 Q 800 300 900 340" fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- multiplas telas ao redor assistindo o mesmo lance -->
+  <g stroke="#f4f6fa" stroke-opacity="0.5" stroke-width="2.5" fill="none">
+    <rect x="330" y="520" width="150" height="100" rx="8"/>
+    <rect x="560" y="600" width="150" height="100" rx="8"/>
+    <rect x="790" y="620" width="150" height="100" rx="8"/>
+    <rect x="1020" y="600" width="150" height="100" rx="8"/>
+    <rect x="1200" y="520" width="150" height="100" rx="8"/>
+  </g>
+
+  <!-- em cada tela, um pequeno ponto marcando "anotacao" -->
+  <g fill="#e57426" fill-opacity="0.85">
+    <circle cx="405" cy="570" r="6"/>
+    <circle cx="635" cy="650" r="6"/>
+    <circle cx="865" cy="670" r="6"/>
+    <circle cx="1095" cy="650" r="6"/>
+    <circle cx="1275" cy="570" r="6"/>
+  </g>
+
+  <!-- linhas conectando cada tela ao lance central -->
+  <g stroke="#7686a8" stroke-opacity="0.3" stroke-width="1.5">
+    <line x1="405" y1="520" x2="750" y2="340"/>
+    <line x1="635" y1="600" x2="780" y2="340"/>
+    <line x1="865" y1="620" x2="810" y2="340"/>
+    <line x1="1095" y1="600" x2="830" y2="340"/>
+    <line x1="1275" y1="520" x2="860" y2="340"/>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="660" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
