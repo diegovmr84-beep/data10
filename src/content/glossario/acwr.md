@@ -3,7 +3,7 @@ term: "ACWR (Acute:Chronic Workload Ratio)"
 shortDefinition: "Razão entre a carga física da última semana e a média das últimas quatro semanas — usada para estimar risco de lesão a partir de dados de GPS."
 category: "Ciência de Dados"
 relatedPosts: ["acwr-carga-de-treino-prevencao-de-lesoes", "visao-computacional-tracking-data", "sono-dado-prevencao-lesao", "plataforma-forca-previsao-lesao"]
-relatedTerms: ["tracking-data", "machine-learning", "actigrafia", "plataforma-de-forca"]
+relatedTerms: ["tracking-data", "machine-learning", "actigrafia", "plataforma-de-forca", "carga-interna"]
 ---
 
 **ACWR (Acute:Chronic Workload Ratio)**, ou "razão entre carga aguda e carga crônica", compara o volume de trabalho físico recente de um jogador (última semana) com sua média de carga nas últimas quatro semanas, a partir de dados captados por coletes de GPS em treinos e jogos.
