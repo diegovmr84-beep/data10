@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#d1590f" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d1590f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- fontes de dado convergindo -->
+  <g fill="#7686a8" fill-opacity="0.6">
+    <circle cx="330" cy="230" r="10"/>
+    <circle cx="290" cy="360" r="10"/>
+    <circle cx="310" cy="500" r="10"/>
+    <circle cx="380" cy="620" r="10"/>
+    <circle cx="470" cy="700" r="10"/>
+  </g>
+  <g stroke="#7686a8" stroke-opacity="0.3" stroke-width="1.5">
+    <line x1="330" y1="230" x2="700" y2="450"/>
+    <line x1="290" y1="360" x2="700" y2="450"/>
+    <line x1="310" y1="500" x2="700" y2="450"/>
+    <line x1="380" y1="620" x2="700" y2="450"/>
+    <line x1="470" y1="700" x2="700" y2="450"/>
+  </g>
+
+  <!-- "lago" de dados central -->
+  <ellipse cx="800" cy="460" rx="130" ry="80" fill="#e57426" fill-opacity="0.25" stroke="#e57426" stroke-opacity="0.7" stroke-width="3"/>
+  <ellipse cx="800" cy="460" rx="90" ry="54" fill="#e57426" fill-opacity="0.35"/>
+
+  <!-- arquibancada estilizada a direita, com alguns assentos preenchidos alem da linha -->
+  <g>
+    <rect x="1020" y="360" width="220" height="200" fill="none" stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="2"/>
+    <g fill="#f4f6fa" fill-opacity="0.5">
+      <circle cx="1045" cy="390" r="8"/><circle cx="1075" cy="390" r="8"/><circle cx="1105" cy="390" r="8"/><circle cx="1135" cy="390" r="8"/><circle cx="1165" cy="390" r="8"/><circle cx="1195" cy="390" r="8"/><circle cx="1225" cy="390" r="8"/>
+      <circle cx="1045" cy="420" r="8"/><circle cx="1075" cy="420" r="8"/><circle cx="1105" cy="420" r="8"/><circle cx="1165" cy="420" r="8"/><circle cx="1195" cy="420" r="8"/><circle cx="1225" cy="420" r="8"/>
+    </g>
+    <g fill="#e57426" fill-opacity="0.85">
+      <circle cx="1135" cy="420" r="8"/>
+      <circle cx="1045" cy="450" r="8"/><circle cx="1105" cy="450" r="8"/><circle cx="1195" cy="450" r="8"/>
+    </g>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="660" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.06" stroke-width="2"/>
+</svg>
