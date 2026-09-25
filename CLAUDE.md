@@ -46,6 +46,17 @@ sendo SVG gerado por código, mesma paleta de marca (gradiente navy
 `#f4f6fa`), sem imagem externa.
 
 - Vale só para posts novos — os 70+ posts antigos não são redesenhados.
+- **Zona segura obrigatória:** o SVG é desenhado em viewBox 1600×900, mas
+  é exibido cortado (`object-cover`) em pelo menos duas proporções
+  diferentes: 21:9 no topo do artigo (corta ~107px do topo e ~107px da
+  base) e 4:3 no card de listagem em tela pequena (corta ~200px de cada
+  lado). Qualquer elemento com texto ou informação (selo de categoria,
+  rótulo, número) precisa ficar dentro do retângulo seguro aproximado
+  **x: 220–1380, y: 130–770** do viewBox. Elemento decorativo de fundo
+  (numeral fantasma, textura) pode sangrar até a borda sem problema —
+  só conteúdo que precisa ser lido tem que respeitar a zona segura.
+  Antes de commitar uma capa nova, renderizar o build e checar o PNG
+  gerado (`dist/_astro/<slug>*.png`) pra confirmar visualmente.
 - Quando o post for de metodologia/tática/métrica e a própria capa puder
   funcionar como mini-diagrama explicativo (zona de pressão, formação,
   etc.), usar a **Direção B — diagrama-capa** em vez da A.
