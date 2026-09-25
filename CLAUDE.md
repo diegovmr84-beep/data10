@@ -35,6 +35,34 @@ deve ser o padrão): cobertura de resultado de jogo específico (mesmo com
 5. Commitar, dar push, monitorar o deploy do GitHub Actions até
    `completed`/`success`.
 
+## Capa dos posts (vigente a partir de 25/09/2026)
+
+Padrão de capa mudou para a **Direção A — pôster editorial**: um motivo
+visual central forte (não mais um padrão de pontos abstratos espalhados
+pela tela) mais um selo de categoria (pill arredondado, cor ember,
+texto da categoria em Inter bold) impresso na própria capa. Continua
+sendo SVG gerado por código, mesma paleta de marca (gradiente navy
+`#101a30`→`#0b1120`, ember `#e57426`/`#d1590f`, slate `#7686a8`, claro
+`#f4f6fa`), sem imagem externa.
+
+- Vale só para posts novos — os 70+ posts antigos não são redesenhados.
+- Quando o post for de metodologia/tática/métrica e a própria capa puder
+  funcionar como mini-diagrama explicativo (zona de pressão, formação,
+  etc.), usar a **Direção B — diagrama-capa** em vez da A.
+- Para post que explica formação ou esquema tático em detalhe, considerar
+  incluir no corpo do post um **diagrama didático em estilo futebol de
+  botão** (discos sobre feltro verde com moldura de madeira, mostrando
+  jogador e seta de movimento/pressão) — usar com critério, é peça nova
+  por post, não reaproveitável.
+
+## SEO: título e descrição (vigente a partir de 24/09/2026)
+
+- Título ≤ 60 caracteres **incluindo** o sufixo " · Data10" (ou seja,
+  título em si com até ~51 caracteres).
+- Meta description ≤ 160 caracteres.
+- Vale só para posts novos daqui pra frente — os 70+ posts antigos não
+  são reescritos retroativamente.
+
 ## Padrão de rigor editorial
 
 - Toda estatística ou claim relevante precisa ser checada contra fonte
