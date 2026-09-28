@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="800" font-family="Source Serif 4, Georgia, serif" font-size="320" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">12Hz</text>
+
+  <!-- lado esquerdo: malha de camera (futebol), linhas convergindo pra pontos de camera -->
+  <g stroke="#7686a8" stroke-opacity="0.5" stroke-width="2" fill="none">
+    <path d="M 300 250 L 700 470 L 300 690"/>
+    <path d="M 300 320 L 700 470"/>
+    <path d="M 300 620 L 700 470"/>
+    <path d="M 300 250 L 300 690"/>
+  </g>
+  <g fill="#7686a8">
+    <circle cx="300" cy="250" r="9"/>
+    <circle cx="300" cy="690" r="9"/>
+    <circle cx="700" cy="470" r="7" fill="#c7d0e2"/>
+  </g>
+
+  <!-- lado direito: pontos de chip (NFL), discretos, um por jogador, mais isolados -->
+  <g fill="#e57426">
+    <circle cx="950" cy="330" r="11"/>
+    <circle cx="1030" cy="400" r="11"/>
+    <circle cx="1120" cy="320" r="11"/>
+    <circle cx="980" cy="480" r="11"/>
+    <circle cx="1100" cy="520" r="11"/>
+    <circle cx="1200" cy="450" r="11"/>
+  </g>
+  <g stroke="#e57426" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="3 6">
+    <circle cx="950" cy="330" r="26" fill="none"/>
+    <circle cx="1030" cy="400" r="26" fill="none"/>
+    <circle cx="1120" cy="320" r="26" fill="none"/>
+    <circle cx="980" cy="480" r="26" fill="none"/>
+    <circle cx="1100" cy="520" r="26" fill="none"/>
+    <circle cx="1200" cy="450" r="26" fill="none"/>
+  </g>
+
+  <!-- linha divisoria central sutil -->
+  <line x1="830" y1="180" x2="830" y2="740" stroke="#f4f6fa" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="6 10"/>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="300" height="46" rx="23" fill="#e57426"/>
+    <text x="150" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">TECNOLOGIA E DADOS</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
