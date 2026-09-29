@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <linearGradient id="whistle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e57426"/>
+      <stop offset="100%" stop-color="#b3450c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="800" font-family="Source Serif 4, Georgia, serif" font-size="360" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">40%</text>
+
+  <!-- rede de pontos (nos de dado) convergindo -->
+  <g stroke="#7686a8" stroke-opacity="0.4" stroke-width="2">
+    <line x1="380" y1="280" x2="700" y2="470"/>
+    <line x1="380" y1="420" x2="700" y2="470"/>
+    <line x1="380" y1="560" x2="700" y2="470"/>
+    <line x1="460" y1="230" x2="700" y2="470"/>
+    <line x1="460" y1="660" x2="700" y2="470"/>
+    <line x1="620" y1="640" x2="700" y2="470"/>
+    <line x1="620" y1="300" x2="700" y2="470"/>
+  </g>
+  <g fill="#7686a8">
+    <circle cx="380" cy="280" r="8"/><circle cx="380" cy="420" r="8"/><circle cx="380" cy="560" r="8"/>
+    <circle cx="460" cy="230" r="8"/><circle cx="460" cy="660" r="8"/>
+    <circle cx="620" cy="300" r="8"/><circle cx="620" cy="640" r="8"/>
+  </g>
+
+  <!-- apito estilizado, silhueta simples -->
+  <g transform="translate(760,390)">
+    <path d="M 0 40 C 0 10 30 -10 70 -10 L 220 -10 C 250 -10 270 15 270 45 C 270 75 250 100 220 100 L 70 100 C 30 100 0 70 0 40 Z" fill="url(#whistle)"/>
+    <circle cx="235" cy="45" r="22" fill="#0b1120" fill-opacity="0.55"/>
+    <rect x="40" y="-10" width="14" height="110" fill="#0b1120" fill-opacity="0.35"/>
+  </g>
+  <!-- ondas de som saindo do apito -->
+  <g stroke="#f4f6fa" stroke-opacity="0.35" stroke-width="3" fill="none">
+    <path d="M 1060 380 C 1100 410 1100 470 1060 500"/>
+    <path d="M 1100 355 C 1155 400 1155 480 1100 525"/>
+  </g>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="280" height="46" rx="23" fill="#e57426"/>
+    <text x="140" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">GESTÃO ESPORTIVA</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
