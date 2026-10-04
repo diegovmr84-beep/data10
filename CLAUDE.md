@@ -35,6 +35,28 @@ deve ser o padrão): cobertura de resultado de jogo específico (mesmo com
 5. Commitar, dar push, monitorar o deploy do GitHub Actions até
    `completed`/`success`.
 
+## Nota operacional: duas contas GitHub (desde 29/09/2026)
+
+O usuário mantém duas contas GitHub que se alternam como identidade
+conectada ao Claude Code (`diegovmr84-beep`, dona do repositório
+`data10`, e `diegovaloismr`, usada em outro projeto). A conexão é uma
+identidade por vez — quando a conta ativa não é a `diegovmr84-beep`,
+leitura (`git fetch`, `get_me`, `get_commit`) continua funcionando
+normalmente porque o repositório é público, mas qualquer escrita
+(`git push`, `push_files`, `create_or_update_file`) falha com
+`403 Forbidden` (git) ou `403 Resource not accessible by integration`
+(API) — um erro que só aparece na hora de salvar, depois do trabalho
+já feito.
+
+Para evitar descobrir isso tarde: **no início de uma sessão de
+trabalho no Data10, antes de escrever vários posts, chamar
+`mcp__github__get_me` uma vez** e confirmar que a conta retornada é
+`diegovmr84-beep` (ou outra com permissão de escrita confirmada nesse
+repositório). Se vier `diegovaloismr` ou qualquer conta sem permissão,
+avisar o usuário e pedir pra trocar o conector em claude.ai → Settings
+→ Connectors **antes** de seguir com o trabalho, em vez de escrever
+tudo e só descobrir o bloqueio no `git push` final.
+
 ## Capa dos posts (vigente a partir de 25/09/2026)
 
 Padrão de capa mudou para a **Direção A — pôster editorial**: um motivo

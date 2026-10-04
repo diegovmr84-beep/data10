@@ -3,7 +3,7 @@ term: "Dado de evento"
 shortDefinition: "Registro discreto de cada ação de uma partida (passe, chute, desarme, falta), com informações como jogador envolvido, posição no campo e resultado — a matéria-prima por trás de métricas como xG e packing."
 category: "Ciência de Dados"
 relatedPosts: ["trabalhadores-anotacao-dados-futebol", "o-que-e-xg", "packing-jogadores-ultrapassados", "visao-computacional-tracking-data"]
-relatedTerms: ["tracking-data", "xg", "packing"]
+relatedTerms: ["tracking-data", "xg", "packing", "statsbomb-360"]
 ---
 
 **Dado de evento** é o tipo mais tradicional de dado no futebol: cada ação relevante de uma partida — um passe, um chute, um desarme, uma falta — registrada como uma linha discreta, com informações como o jogador envolvido, a posição no campo onde a ação aconteceu, o momento da partida e o resultado (certo/errado, gol/perdido).

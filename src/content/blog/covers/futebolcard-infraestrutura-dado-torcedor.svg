@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="800" font-family="Source Serif 4, Georgia, serif" font-size="320" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">40+</text>
+
+  <!-- linhas conectando o hub central a escudos ao redor -->
+  <g stroke="#7686a8" stroke-opacity="0.4" stroke-width="2">
+    <line x1="800" y1="470" x2="480" y2="270"/>
+    <line x1="800" y1="470" x2="600" y2="230"/>
+    <line x1="800" y1="470" x2="740" y2="210"/>
+    <line x1="800" y1="470" x2="900" y2="210"/>
+    <line x1="800" y1="470" x2="1030" y2="250"/>
+    <line x1="800" y1="470" x2="1130" y2="330"/>
+    <line x1="800" y1="470" x2="480" y2="620"/>
+    <line x1="800" y1="470" x2="600" y2="690"/>
+    <line x1="800" y1="470" x2="760" y2="720"/>
+    <line x1="800" y1="470" x2="920" y2="710"/>
+    <line x1="800" y1="470" x2="1060" y2="650"/>
+    <line x1="800" y1="470" x2="1140" y2="560"/>
+  </g>
+
+  <!-- escudos abstratos (clubes) nas pontas -->
+  <g fill="#7686a8" fill-opacity="0.7">
+    <path d="M 480 255 L 495 262 L 495 280 L 480 292 L 465 280 L 465 262 Z"/>
+    <path d="M 600 215 L 615 222 L 615 240 L 600 252 L 585 240 L 585 222 Z"/>
+    <path d="M 740 195 L 755 202 L 755 220 L 740 232 L 725 220 L 725 202 Z"/>
+    <path d="M 900 195 L 915 202 L 915 220 L 900 232 L 885 220 L 885 202 Z"/>
+    <path d="M 1030 235 L 1045 242 L 1045 260 L 1030 272 L 1015 260 L 1015 242 Z"/>
+    <path d="M 1130 315 L 1145 322 L 1145 340 L 1130 352 L 1115 340 L 1115 322 Z"/>
+    <path d="M 480 605 L 495 612 L 495 630 L 480 642 L 465 630 L 465 612 Z"/>
+    <path d="M 600 675 L 615 682 L 615 700 L 600 712 L 585 700 L 585 682 Z"/>
+    <path d="M 760 705 L 775 712 L 775 730 L 760 742 L 745 730 L 745 712 Z"/>
+    <path d="M 920 695 L 935 702 L 935 720 L 920 732 L 905 720 L 905 702 Z"/>
+    <path d="M 1060 635 L 1075 642 L 1075 660 L 1060 672 L 1045 660 L 1045 642 Z"/>
+    <path d="M 1140 545 L 1155 552 L 1155 570 L 1140 582 L 1125 570 L 1125 552 Z"/>
+  </g>
+
+  <!-- hub central em destaque -->
+  <circle cx="800" cy="470" r="34" fill="#e57426"/>
+  <circle cx="800" cy="470" r="52" fill="none" stroke="#e57426" stroke-opacity="0.4" stroke-width="2"/>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="280" height="46" rx="23" fill="#e57426"/>
+    <text x="140" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">GESTÃO ESPORTIVA</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>

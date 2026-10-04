@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="frame" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#e57426" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#e57426" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="800" font-family="Source Serif 4, Georgia, serif" font-size="300" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">360</text>
+
+  <!-- area do freeze-frame -->
+  <circle cx="800" cy="470" r="280" fill="url(#frame)"/>
+  <circle cx="800" cy="470" r="280" fill="none" stroke="#7686a8" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 10"/>
+
+  <!-- evento central em destaque -->
+  <circle cx="800" cy="470" r="20" fill="#e57426"/>
+
+  <!-- jogadores visiveis no freeze-frame -->
+  <g fill="#f4f6fa">
+    <circle cx="650" cy="360" r="12"/>
+    <circle cx="720" cy="300" r="12"/>
+    <circle cx="920" cy="330" r="12"/>
+    <circle cx="980" cy="420" r="12"/>
+    <circle cx="640" cy="560" r="12"/>
+    <circle cx="730" cy="640" r="12"/>
+    <circle cx="900" cy="620" r="12"/>
+    <circle cx="1000" cy="540" r="12"/>
+  </g>
+  <!-- linhas de conexao sutis entre jogadores e evento -->
+  <g stroke="#f4f6fa" stroke-opacity="0.2" stroke-width="2">
+    <line x1="650" y1="360" x2="800" y2="470"/>
+    <line x1="720" y1="300" x2="800" y2="470"/>
+    <line x1="920" y1="330" x2="800" y2="470"/>
+    <line x1="980" y1="420" x2="800" y2="470"/>
+    <line x1="640" y1="560" x2="800" y2="470"/>
+    <line x1="730" y1="640" x2="800" y2="470"/>
+    <line x1="900" y1="620" x2="800" y2="470"/>
+    <line x1="1000" y1="540" x2="800" y2="470"/>
+  </g>
+
+  <!-- jogador fora de quadro, tracejado (nao capturado) -->
+  <circle cx="1140" cy="470" r="12" fill="none" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="3 5"/>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="280" height="46" rx="23" fill="#e57426"/>
+    <text x="140" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">CIÊNCIA DE DADOS</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
