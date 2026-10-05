@@ -2,7 +2,7 @@
 term: "EPTS (Electronic Performance and Tracking Systems)"
 shortDefinition: "Programa de certificação da FIFA que testa e aprova sistemas de rastreamento — óticos ou vestíveis — usados em partida oficial de futebol, garantindo segurança e um padrão mínimo de qualidade de dado."
 category: "Tecnologia e Dados"
-relatedPosts: ["nfl-futebol-tracking-data-comparativo"]
+relatedPosts: ["nfl-futebol-tracking-data-comparativo", "colete-gps-como-funciona-guia"]
 relatedTerms: ["tracking-data", "broadcast-tracking-data"]
 ---
 
