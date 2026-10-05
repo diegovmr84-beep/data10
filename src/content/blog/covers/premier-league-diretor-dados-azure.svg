@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+    <radialGradient id="cloud" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#e57426" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#e57426" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="800" font-family="Source Serif 4, Georgia, serif" font-size="280" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">1º CTO</text>
+
+  <!-- nuvem de dado -->
+  <circle cx="900" cy="560" r="230" fill="url(#cloud)"/>
+  <g fill="none" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2">
+    <path d="M 760 600 a 60 60 0 0 1 0 -120 a 80 80 0 0 1 155 -20 a 65 65 0 0 1 15 128 Z"/>
+  </g>
+
+  <!-- organograma: cargo em destaque no topo, conectado por linha a nuvem -->
+  <line x1="700" y1="300" x2="830" y2="470" stroke="#e57426" stroke-width="3"/>
+  <g transform="translate(560,230)">
+    <rect width="280" height="70" rx="10" fill="#16223f" stroke="#e57426" stroke-width="2"/>
+    <circle cx="35" cy="35" r="16" fill="#e57426"/>
+    <rect x="65" y="22" width="190" height="10" rx="4" fill="#f4f6fa" fill-opacity="0.8"/>
+    <rect x="65" y="40" width="130" height="8" rx="4" fill="#7686a8" fill-opacity="0.6"/>
+  </g>
+
+  <!-- dois cargos subordinados, abaixo e aos lados -->
+  <g transform="translate(380,430)">
+    <rect width="190" height="54" rx="8" fill="#16223f" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2"/>
+    <rect x="18" y="18" width="130" height="8" rx="4" fill="#7686a8" fill-opacity="0.7"/>
+    <rect x="18" y="32" width="90" height="7" rx="4" fill="#7686a8" fill-opacity="0.45"/>
+  </g>
+  <g transform="translate(610,500)">
+    <rect width="190" height="54" rx="8" fill="#16223f" stroke="#7686a8" stroke-opacity="0.5" stroke-width="2"/>
+    <rect x="18" y="18" width="130" height="8" rx="4" fill="#7686a8" fill-opacity="0.7"/>
+    <rect x="18" y="32" width="90" height="7" rx="4" fill="#7686a8" fill-opacity="0.45"/>
+  </g>
+  <line x1="700" y1="300" x2="475" y2="430" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2"/>
+  <line x1="700" y1="300" x2="705" y2="500" stroke="#7686a8" stroke-opacity="0.4" stroke-width="2"/>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="280" height="46" rx="23" fill="#e57426"/>
+    <text x="140" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">GESTÃO ESPORTIVA</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
