@@ -1,7 +1,7 @@
 ---
 title: "São Paulo junta bilheteria e sócio num só dado"
 description: "O São Paulo fechou com a Ticketmaster um contrato de R$ 140 milhões por 5 anos pra unificar bilheteria e sócio-torcedor, hoje em duas empresas diferentes."
-pubDate: 2026-10-15T13:00:00Z
+pubDate: 2026-10-06T20:00:00Z
 author: "Redação Data10"
 category: "Gestão Esportiva"
 tags: ["Gestão Esportiva", "Dados do Torcedor", "São Paulo FC", "Experiência do Torcedor"]

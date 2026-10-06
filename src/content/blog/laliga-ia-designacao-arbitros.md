@@ -1,7 +1,7 @@
 ---
 title: "IA entra na escala de árbitro da LaLiga"
 description: "Desde a próxima temporada, uma IA avalia o árbitro da LaLiga e sugere quem apita cada jogo — 40% da nota fica objetiva, mas quem decide ainda é gente."
-pubDate: 2026-10-07T13:00:00Z
+pubDate: 2026-10-06T14:00:00Z
 author: "Redação Data10"
 category: "Gestão Esportiva"
 tags: ["Gestão Esportiva", "Inteligência Artificial", "Arbitragem", "LaLiga", "Governança"]

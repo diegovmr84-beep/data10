@@ -1,7 +1,7 @@
 ---
 title: "A IA que roda no sensor, sem GPS nem colete"
 description: "Um sensor de 16g com IA embarcada promete 36 métricas de desempenho sem GPS nem colete — mas ainda está em financiamento coletivo no Kickstarter."
-pubDate: 2026-10-12T13:00:00Z
+pubDate: 2026-10-06T17:45:00Z
 author: "Redação Data10"
 category: "Tecnologia e Dados"
 tags: ["Tecnologia e Dados", "Wearables", "Inteligência Artificial", "Scouting"]

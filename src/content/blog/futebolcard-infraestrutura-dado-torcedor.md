@@ -1,7 +1,7 @@
 ---
 title: "A infraestrutura de dado por trás de 40 clubes"
 description: "A FutebolCard processa bilheteria, sócio-torcedor e biometria de mais de 40 clubes brasileiros — e já reduz em 60% o tempo de entrada no estádio."
-pubDate: 2026-10-10T13:00:00Z
+pubDate: 2026-10-06T16:15:00Z
 author: "Redação Data10"
 category: "Gestão Esportiva"
 tags: ["Gestão Esportiva", "Experiência do Torcedor", "Dados do Torcedor", "Biometria", "Infraestrutura"]

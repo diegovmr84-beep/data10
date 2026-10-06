@@ -1,7 +1,7 @@
 ---
 title: "StatsBomb 360: o dado entre evento e tracking"
 description: "Pra cada um dos 3.300 eventos de uma partida, o StatsBomb 360 captura a posição de todo jogador visível em câmera — sem o custo do tracking data completo."
-pubDate: 2026-10-09T13:00:00Z
+pubDate: 2026-10-06T15:30:00Z
 author: "Redação Data10"
 category: "Ciência de Dados"
 tags: ["Ciência de Dados", "Tracking Data", "StatsBomb", "Visão Computacional"]

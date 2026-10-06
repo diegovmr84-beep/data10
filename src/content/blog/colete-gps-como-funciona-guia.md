@@ -1,7 +1,7 @@
 ---
 title: "Colete GPS: o que tem dentro, e como começar"
 description: "O que tem dentro do colete GPS, como o sensor vira métrica de treino, e como um clube pequeno pode começar a usar por menos de R$ 1.500."
-pubDate: 2026-10-13T13:00:00Z
+pubDate: 2026-10-06T18:30:00Z
 author: "Redação Data10"
 category: "Tecnologia e Dados"
 tags: ["Tecnologia e Dados", "GPS", "Wearables", "Gestão Esportiva"]

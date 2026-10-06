@@ -1,7 +1,7 @@
 ---
 title: "O dado do Barcelona sobre lesão e menstruação"
 description: "O Barcelona rastreou 852 ciclos e 80 lesões em 4 temporadas: a menstruação não aumenta o risco de lesão, mas triplica o tempo de afastamento."
-pubDate: 2026-10-14T13:00:00Z
+pubDate: 2026-10-06T19:15:00Z
 author: "Redação Data10"
 category: "Estatística Avançada"
 tags: ["Estatística Avançada", "Futebol Feminino", "Prevenção de Lesões", "FC Barcelona", "UEFA"]

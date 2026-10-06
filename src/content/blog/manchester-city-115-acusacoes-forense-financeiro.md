@@ -1,7 +1,7 @@
 ---
 title: "A conta que derrubou o Manchester City"
 description: "A comissão da Premier League achou o Manchester City culpado em 114 de 115 acusações — usando um método de perícia financeira que vale a pena entender."
-pubDate: 2026-10-08T13:00:00Z
+pubDate: 2026-10-06T14:45:00Z
 author: "Redação Data10"
 category: "Gestão Esportiva"
 tags: ["Fair Play Financeiro", "Gestão Financeira", "Governança", "Manchester City", "Premier League"]

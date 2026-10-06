@@ -1,7 +1,7 @@
 ---
 title: "O chefe de dado da Premier League veio da moda"
 description: "A Premier League criou seu primeiro cargo de chefe de dado e tecnologia — e contratou o ex-CIO da varejista de moda River Island pra ocupar."
-pubDate: 2026-10-11T13:00:00Z
+pubDate: 2026-10-06T17:00:00Z
 author: "Redação Data10"
 category: "Gestão Esportiva"
 tags: ["Gestão Esportiva", "Inteligência Artificial", "Premier League", "Governança", "Experiência do Torcedor"]
