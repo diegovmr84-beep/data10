@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="820" font-family="Source Serif 4, Georgia, serif" font-size="280" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">8</text>
+
+  <!-- silhueta simplificada de camisa de futebol -->
+  <path d="M 630 280
+           L 630 220
+           Q 630 170 700 160
+           L 760 210
+           Q 800 240 840 210
+           L 900 160
+           Q 970 170 970 220
+           L 970 280
+           L 920 320
+           L 920 700
+           Q 920 730 890 730
+           L 710 730
+           Q 680 730 680 700
+           L 680 320
+           Z"
+        fill="none" stroke="#7686a8" stroke-opacity="0.5" stroke-width="4"/>
+
+  <!-- pontos de carga de treino espalhados -->
+  <g fill="#7686a8" fill-opacity="0.5">
+    <circle cx="730" cy="400" r="7"/>
+    <circle cx="870" cy="420" r="7"/>
+    <circle cx="760" cy="560" r="7"/>
+    <circle cx="840" cy="600" r="7"/>
+    <circle cx="800" cy="680" r="7"/>
+  </g>
+
+  <!-- linha de pulso cardiaco atravessando o peito -->
+  <path d="M 660 470 L 720 470 L 745 400 L 775 540 L 805 440 L 825 470 L 940 470"
+        fill="none" stroke="#e57426" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="280" height="46" rx="23" fill="#e57426"/>
+    <text x="140" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">GESTÃO ESPORTIVA</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
