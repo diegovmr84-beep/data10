@@ -57,6 +57,25 @@ avisar o usuário e pedir pra trocar o conector em claude.ai → Settings
 → Connectors **antes** de seguir com o trabalho, em vez de escrever
 tudo e só descobrir o bloqueio no `git push` final.
 
+## Ritmo de publicação (vigente a partir de 08/10/2026)
+
+O Google AdSense rejeitou a primeira solicitação de revisão do site por
+"conteúdo de baixo valor", citando as políticas de spam do Google —
+categoria que inclui conteúdo publicado em escala, de forma
+automatizada. Uma causa provável identificada: o histórico de commits
+tinha vários dias com múltiplos posts publicados de uma vez (inclusive
+um lote de 12 posts na mesma data, em parte resíduo de uma correção de
+data retroativa), o que visualmente se parece com publicação em massa
+pra quem analisa o arquivo do blog de fora.
+
+Daqui pra frente, **publicar no máximo 1 post por dia** (a mesma sessão
+de trabalho pode *escrever* mais de um post, como de costume, mas evitar
+dar commit/push de vários no mesmo dia corrido — se sobrar post pronto,
+guardar e publicar no dia seguinte). Isso não é garantia de aprovação do
+AdSense — o site também é novo e carece de tráfego orgânico consolidado,
+fator fora do nosso controle —, mas é um ajuste de padrão visível que
+vale manter de qualquer forma.
+
 ## Capa dos posts (vigente a partir de 25/09/2026)
 
 Padrão de capa mudou para a **Direção A — pôster editorial**: um motivo
