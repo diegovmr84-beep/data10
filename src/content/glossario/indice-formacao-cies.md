@@ -3,7 +3,7 @@ term: "Índice de formação (CIES)"
 shortDefinition: "Métrica do CIES Football Observatory que rankeia categorias de base combinando nível dos clubes empregadores e minutos jogados por atletas formados na casa, ainda ativos no profissional."
 category: "Gestão Esportiva"
 relatedPosts: ["ranking-categorias-de-base-cies-football-benchmark", "categorias-de-base-gestao-de-dados"]
-relatedTerms: []
+relatedTerms: ["valor-de-transferencia-cies"]
 ---
 
 O **índice de formação** é a métrica usada pelo CIES Football Observatory para rankear categorias de base de clubes de futebol no mundo todo. Não mede quantidade bruta de jogadores revelados — mede o quanto esses jogadores realmente **jogam, e em que nível**, depois de formados.
