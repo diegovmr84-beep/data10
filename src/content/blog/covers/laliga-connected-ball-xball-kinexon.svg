@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101a30"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- numeral fantasma de fundo -->
+  <text x="1560" y="820" font-family="Source Serif 4, Georgia, serif" font-size="260" font-weight="700" fill="#f4f6fa" fill-opacity="0.05" text-anchor="end">12</text>
+
+  <!-- campo estilizado: retangulo com linha central -->
+  <rect x="420" y="260" width="620" height="420" fill="none" stroke="#7686a8" stroke-opacity="0.35" stroke-width="3"/>
+  <line x1="730" y1="260" x2="730" y2="680" stroke="#7686a8" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="730" cy="470" r="60" fill="none" stroke="#7686a8" stroke-opacity="0.35" stroke-width="2"/>
+
+  <!-- antenas nas bordas do campo (pontos) -->
+  <g fill="#7686a8" fill-opacity="0.6">
+    <circle cx="420" cy="260" r="8"/>
+    <circle cx="730" cy="260" r="8"/>
+    <circle cx="1040" cy="260" r="8"/>
+    <circle cx="420" cy="470" r="8"/>
+    <circle cx="1040" cy="470" r="8"/>
+    <circle cx="420" cy="680" r="8"/>
+    <circle cx="730" cy="680" r="8"/>
+    <circle cx="1040" cy="680" r="8"/>
+  </g>
+
+  <!-- bola conectada no centro, emitindo sinal -->
+  <circle cx="730" cy="470" r="18" fill="#e57426"/>
+  <circle cx="730" cy="470" r="38" fill="none" stroke="#e57426" stroke-opacity="0.5" stroke-width="3"/>
+  <circle cx="730" cy="470" r="60" fill="none" stroke="#e57426" stroke-opacity="0.3" stroke-width="2"/>
+  <circle cx="730" cy="470" r="85" fill="none" stroke="#e57426" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- linhas de sinal pras antenas mais proximas -->
+  <g stroke="#e57426" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 6">
+    <line x1="730" y1="470" x2="420" y2="260"/>
+    <line x1="730" y1="470" x2="1040" y2="260"/>
+    <line x1="730" y1="470" x2="420" y2="680"/>
+    <line x1="730" y1="470" x2="1040" y2="680"/>
+  </g>
+
+  <!-- selo de categoria (zona segura x:220-1380 y:130-770) -->
+  <g transform="translate(250,160)">
+    <rect width="320" height="46" rx="23" fill="#e57426"/>
+    <text x="160" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#0b1120" text-anchor="middle">TECNOLOGIA E DADOS</text>
+  </g>
+
+  <ellipse cx="800" cy="450" rx="700" ry="440" fill="none" stroke="#e6eaf3" stroke-opacity="0.05" stroke-width="2"/>
+</svg>
