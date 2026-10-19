@@ -5,20 +5,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const servicos = [
   {
-    title: 'Leis de incentivo (cultura e esporte)',
-    body: 'Elaboração de projetos para captação via leis de incentivo fiscal, nas esferas federal, estadual e municipal, nas áreas de cultura e esporte.',
+    title: 'Leis de incentivo fiscal',
+    body: 'Elaboração de projetos para captação via lei de incentivo (dedução de IR ou crédito de ICMS), nas esferas federal, estadual e municipal — cultura, esporte e outras áreas, como criança e adolescente, pessoa idosa, saúde e PCD.',
   },
   {
-    title: 'Editais públicos e privados',
-    body: 'Levantamento de editais compatíveis com o seu projeto e elaboração da proposta completa, dentro das exigências de cada edital.',
+    title: 'Recurso público e editais',
+    body: 'Levantamento de edital, chamamento público e subvenção compatíveis com o seu projeto, além de apoio na articulação de emenda parlamentar — com a proposta completa, dentro das exigências de cada fonte.',
   },
   {
-    title: 'Emendas parlamentares',
-    body: 'Apoio na articulação e no encaminhamento de propostas junto a parlamentares, com a documentação técnica necessária.',
+    title: 'Patrocínio e captação privada',
+    body: 'Busca ativa de patrocinador, apoiador e doador, com material de apresentação do projeto adequado ao público empresarial.',
   },
   {
-    title: 'Patrocínio e captação empresarial',
-    body: 'Busca ativa de patrocinador e apoiador, com material de apresentação do projeto adequado ao público empresarial.',
+    title: 'Crédito, investidores e renda própria',
+    body: 'Orientação sobre linha de crédito, financiamento e, para empresa, captação com investidor — além de estratégia de geração de renda própria ligada à causa.',
+  },
+  {
+    title: 'Habilitações e certificações',
+    body: 'Apoio na obtenção de certidão, registro e certificado exigidos antes de captar — como CEBAS, OSCIP, registro em conselho ou a certidão da Lei Pelé.',
   },
   {
     title: 'Acompanhamento e prestação de contas',
@@ -29,7 +33,7 @@ const servicos = [
 
 <BaseLayout
   title="Captação de Recursos"
-  description="Elaboração de projetos para leis de incentivo, editais públicos e privados, emendas parlamentares e patrocínio empresarial, com acompanhamento e prestação de contas."
+  description="Elaboração de projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de captação, com acompanhamento e prestação de contas."
 >
   <section class="border-b border-ink-100 bg-ink-950 text-white">
     <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
@@ -37,7 +41,7 @@ const servicos = [
       <h1 class="mt-4 font-serif-editorial text-3xl font-bold leading-tight sm:text-4xl">Captação de Recursos</h1>
       <p class="mt-4 max-w-2xl text-lg text-ink-200">
         Produção de projetos completos para captação de recurso, do diagnóstico inicial até a prestação de contas
-        — para OSCs, empresas e pessoas físicas.
+        — para OSCs, empresas e pessoas físicas. Veja também o <a href={`${base}/sistema/`} class="underline underline-offset-2 hover:text-white">Data10 Recursos</a>, nosso sistema com os 7 caminhos de captação mapeados.
       </p>
     </div>
   </section>

@@ -11,6 +11,12 @@ const servicos = [
     cta: 'Ver serviços de captação',
   },
   {
+    title: 'Data10 Recursos (o sistema)',
+    body: 'A plataforma que mostra os 7 caminhos de captação disponíveis pro seu perfil, confere a regra em fonte oficial e te leva até o projeto pronto para enviar.',
+    href: `${base}/sistema/`,
+    cta: 'Conhecer o sistema',
+  },
+  {
     title: 'Sites e Aplicativos',
     body: 'Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para você mesmo gerenciar o conteúdo depois da entrega.',
     href: `${base}/sites-aplicativos/`,
@@ -53,8 +59,9 @@ const etapas = [
         Transformamos seu projeto em recurso captado
       </h1>
       <p class="mt-5 max-w-xl text-lg text-ink-200">
-        Elaboração de projetos para leis de incentivo, editais, emendas parlamentares e patrocínio — para OSCs,
-        empresas e pessoas físicas. Também desenvolvemos sites e aplicativos sob medida.
+        Elaboração de projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de
+        captação — para OSCs, empresas e pessoas físicas. Também temos o Data10 Recursos, sistema que conduz esse
+        processo etapa por etapa, e desenvolvemos sites e aplicativos sob medida.
       </p>
       <div class="mt-8 flex flex-wrap gap-4">
         <a href={`${base}/contato/`} class="rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
@@ -69,7 +76,7 @@ const etapas = [
 
   <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
     <h2 class="font-serif-editorial text-2xl font-bold text-ink-950 sm:text-3xl">O que fazemos</h2>
-    <div class="mt-6 grid gap-6 sm:grid-cols-2">
+    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {servicos.map((s) => (
         <a
           href={s.href}
