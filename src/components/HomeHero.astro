@@ -64,28 +64,31 @@ const caminhos = [
             </radialGradient>
           </defs>
 
-          <circle class="network-hub-glow" cx="200" cy="210" r="100" fill="url(#hub-glow)" />
-
-          <g stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4" fill="none">
-            <path class="network-line" d="M200,210 L90,110" />
-            <path class="network-line" d="M200,210 L200,70" style="animation-delay:.3s" />
-            <path class="network-line" d="M200,210 L300,90" style="animation-delay:.6s" />
-            <path class="network-line" d="M200,210 L340,220" style="animation-delay:.9s" />
-            <path class="network-line" d="M200,210 L280,330" style="animation-delay:1.2s" />
-            <path class="network-line" d="M200,210 L120,340" style="animation-delay:1.5s" />
-            <path class="network-line" d="M200,210 L60,230" style="animation-delay:1.8s" />
-          </g>
-          <g stroke="#34d399" stroke-width="1" stroke-opacity="0.2" fill="none">
-            <path d="M90,110 L200,70" />
-            <path d="M300,90 L340,220" />
-            <path d="M120,340 L60,230" />
+          {/* pontinhos de grade, reforçando o ar "digital" do mapa */}
+          <g fill="white" fill-opacity="0.08">
+            {Array.from({ length: 8 }).flatMap((_, row) =>
+              Array.from({ length: 7 }).map((_, col) => (
+                <circle cx={20 + col * 60} cy={20 + row * 40} r="1.4" />
+              ))
+            )}
           </g>
 
-          <circle cx="200" cy="210" r="27" fill="#10b981" />
-          <circle cx="200" cy="210" r="27" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
+          <circle class="network-hub-glow" cx="200" cy="230" r="110" fill="url(#hub-glow)" />
+
+          {/* linhas orgânicas, estilo mapa mental, das etapas até o resultado */}
+          <g stroke="#34d399" stroke-width="2" stroke-opacity="0.45" fill="none">
+            <path class="network-line" d="M85,95 Q130,190 200,230" />
+            <path class="network-line" d="M315,85 Q260,180 200,230" style="animation-delay:.5s" />
+            <path class="network-line" d="M340,250 Q275,240 200,230" style="animation-delay:1s" />
+            <path class="network-line" d="M70,275 Q130,260 200,230" style="animation-delay:1.5s" />
+          </g>
+
+          {/* nó central: o recurso captado */}
+          <circle cx="200" cy="230" r="27" fill="#10b981" />
+          <circle cx="200" cy="230" r="27" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
           <text
             x="200"
-            y="211"
+            y="231"
             text-anchor="middle"
             dominant-baseline="central"
             font-family="'Plus Jakarta Sans', Arial, sans-serif"
@@ -94,14 +97,19 @@ const caminhos = [
             fill="#0b1f3a"
           >$</text>
 
-          <g fill="#34d399">
-            <circle class="network-node" cx="90" cy="110" r="5" />
-            <circle class="network-node" cx="200" cy="70" r="5" style="animation-delay:.3s" />
-            <circle class="network-node" cx="300" cy="90" r="5" style="animation-delay:.6s" />
-            <circle class="network-node" cx="340" cy="220" r="5" style="animation-delay:.9s" />
-            <circle class="network-node" cx="280" cy="330" r="5" style="animation-delay:1.2s" />
-            <circle class="network-node" cx="120" cy="340" r="5" style="animation-delay:1.5s" />
-            <circle class="network-node" cx="60" cy="230" r="5" style="animation-delay:1.8s" />
+          {/* etapas da produção do projeto */}
+          <g>
+            <circle class="network-node" cx="85" cy="95" r="6" fill="#34d399" />
+            <text x="100" y="99" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="15" fill="white" fill-opacity="0.9">Diagnóstico</text>
+
+            <circle class="network-node" cx="315" cy="85" r="6" fill="#34d399" style="animation-delay:.5s" />
+            <text x="300" y="89" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="15" fill="white" fill-opacity="0.9">Elaboração</text>
+
+            <circle class="network-node" cx="340" cy="250" r="6" fill="#34d399" style="animation-delay:1s" />
+            <text x="325" y="254" text-anchor="end" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="15" fill="white" fill-opacity="0.9">Submissão</text>
+
+            <circle class="network-node" cx="70" cy="275" r="6" fill="#34d399" style="animation-delay:1.5s" />
+            <text x="85" y="279" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="15" fill="white" fill-opacity="0.9">Execução</text>
           </g>
         </svg>
       </div>
