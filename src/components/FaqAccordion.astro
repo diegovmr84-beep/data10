@@ -1,0 +1,59 @@
+---
+// [REVISAR]: as 5 perguntas abaixo foram montadas a partir do conteúdo já
+// publicado no site (servicos-captacao, sistema, sobre) — peça pro Diego
+// validar redação e exatidão antes de considerar definitivo.
+const faqs = [
+  {
+    pergunta: 'Quem pode contratar a Data10?',
+    resposta:
+      'Organização da sociedade civil (OSC), empresa — de MEI a grande porte — e pessoa física ou coletivo sem CNPJ, como artista ou agente cultural.',
+  },
+  {
+    pergunta: 'Quais formas de captação vocês cobrem?',
+    resposta:
+      'Sete caminhos: lei de incentivo fiscal, recurso público a fundo perdido, patrocínio e doação privada, renda própria, crédito, investidor (pra empresa) e habilitação/certificação exigida antes de captar. Veja o detalhe de cada um na página do Sistema.',
+  },
+  {
+    pergunta: 'Vocês garantem que meu projeto vai captar o recurso?',
+    resposta:
+      'Não. Preparamos o melhor projeto possível, com regra conferida em fonte oficial — mas a decisão final é sempre do órgão público, do financiador ou do investidor, nunca nossa.',
+  },
+  {
+    pergunta: 'Qual a diferença entre a consultoria e o Data10 Recursos (o sistema)?',
+    resposta:
+      'O sistema é a ferramenta que mapeia os caminhos de captação e te leva até o projeto pronto — pode ser usado por conta própria. A consultoria é o trabalho feito por nós, do diagnóstico à prestação de contas, usando ou não o sistema como apoio.',
+  },
+  {
+    pergunta: 'O atendimento é só em João Pessoa?',
+    resposta:
+      'A sede é em João Pessoa/PB, mas o atendimento é remoto pra qualquer lugar do Brasil.',
+  },
+];
+---
+
+<section class="bg-white py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <div class="text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-emerald-700">Dúvidas frequentes</p>
+      <h2 class="mt-3 font-heading text-3xl font-bold text-ink-900 sm:text-4xl">Perguntas que a gente ouve bastante</h2>
+    </div>
+
+    <div data-reveal-group class="mt-12 flex flex-col gap-3">
+      {faqs.map((f) => (
+        <details data-reveal class="faq-item group rounded-[--radius-card] border border-border bg-surface px-6 py-5 open:bg-emerald-50/40">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-base font-semibold text-ink-900">
+            {f.pergunta}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-emerald-600 transition-transform duration-300 group-open:rotate-45" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-ink-500">{f.resposta}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+}
+const { eyebrow, title, subtitle } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-navy-900 pb-14 pt-32 text-white sm:pb-20 sm:pt-40">
+  <div class="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="page-hero-grid" width="56" height="56" patternUnits="userSpaceOnUse">
+          <path d="M 56 0 L 0 0 0 56" fill="none" stroke="white" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#page-hero-grid)"/>
+    </svg>
+  </div>
+  <div data-reveal class="relative mx-auto max-w-4xl px-4 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-widest text-emerald-400">{eyebrow}</p>
+    <h1 class="mt-4 max-w-2xl font-heading text-3xl font-extrabold leading-tight sm:text-4xl">{title}</h1>
+    {subtitle && <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{subtitle}</p>}
+  </div>
+</section>

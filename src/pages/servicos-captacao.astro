@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -35,33 +36,33 @@ const servicos = [
   title="Captação de Recursos"
   description="Elaboração de projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de captação, com acompanhamento e prestação de contas."
 >
-  <section class="border-b border-ink-100 bg-ink-950 text-white">
-    <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
-      <p class="text-sm font-semibold uppercase tracking-widest text-ember-400">Serviços</p>
-      <h1 class="mt-4 font-serif-editorial text-3xl font-bold leading-tight sm:text-4xl">Captação de Recursos</h1>
-      <p class="mt-4 max-w-2xl text-lg text-ink-200">
-        Produção de projetos completos para captação de recurso, do diagnóstico inicial até a prestação de contas
-        — para OSCs, empresas e pessoas físicas. Veja também o <a href={`${base}/sistema/`} class="underline underline-offset-2 hover:text-white">Data10 Recursos</a>, nosso sistema com os 7 caminhos de captação mapeados.
-      </p>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Serviços"
+    title="Captação de Recursos"
+    subtitle="Produção de projetos completos para captação de recurso, do diagnóstico inicial até a prestação de contas — para OSCs, empresas e pessoas físicas."
+  />
+  <p class="mx-auto -mt-6 max-w-4xl px-4 pb-2 text-sm text-ink-500 sm:px-6">
+    Veja também o <a href={`${base}/sistema/`} class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Data10 Recursos</a>, nosso sistema com os 7 caminhos de captação mapeados.
+  </p>
 
-  <section class="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-    <div class="flex flex-col gap-8">
-      {servicos.map((s) => (
-        <div class="border-b border-ink-100 pb-8 last:border-0">
-          <h2 class="font-serif-editorial text-xl font-bold text-ink-950">{s.title}</h2>
-          <p class="mt-2 text-ink-700">{s.body}</p>
-        </div>
-      ))}
-    </div>
+  <section class="bg-surface py-16 sm:py-20">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <div data-reveal-group class="grid gap-6 sm:grid-cols-2">
+        {servicos.map((s) => (
+          <div data-reveal class="rounded-[--radius-card] border border-border bg-white p-7 shadow-sm transition-shadow hover:shadow-md">
+            <h2 class="font-heading text-lg font-bold text-ink-900">{s.title}</h2>
+            <p class="mt-2.5 text-sm leading-relaxed text-ink-500">{s.body}</p>
+          </div>
+        ))}
+      </div>
 
-    <div class="mt-10 rounded-lg bg-ink-50 p-8 text-center">
-      <h2 class="font-serif-editorial text-xl font-bold text-ink-950">Quer saber se seu projeto se encaixa?</h2>
-      <p class="mt-2 text-ink-700">Fale com a gente e vamos avaliar junto qual mecanismo de captação faz mais sentido.</p>
-      <a href={`${base}/contato/`} class="mt-5 inline-block rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
-        Fale conosco
-      </a>
+      <div data-reveal class="mt-10 rounded-[--radius-card] bg-navy-900 p-10 text-center text-white">
+        <h2 class="font-heading text-xl font-bold">Quer saber se seu projeto se encaixa?</h2>
+        <p class="mt-2 text-white/70">Fale com a gente e vamos avaliar junto qual mecanismo de captação faz mais sentido.</p>
+        <a href={`${base}/contato/`} class="mt-6 inline-block rounded-[--radius-control] bg-emerald-500 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-emerald-600">
+          Fale conosco
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

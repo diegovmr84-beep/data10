@@ -1,46 +1,65 @@
-/* Google Fonts (Source Serif 4 + Inter): carregado via <link> no <head> do
+/* Google Fonts (Plus Jakarta Sans + Inter): carregado via <link> no <head> do
    BaseLayout, não por @import aqui — @import de CSS externo é bloqueante e só
    é descoberto depois que este arquivo termina de baixar, atrasando a fonte. */
 @import 'tailwindcss';
 
 @theme {
-  /* Paleta editorial: navy profundo + laranja queimado como accent */
-  --color-ink-950: #0b1120;
-  --color-ink-900: #101a30;
-  --color-ink-800: #1b2947;
-  --color-ink-700: #29395e;
-  --color-ink-600: #3d517d;
-  --color-ink-400: #7686a8;
-  --color-ink-200: #c7d0e2;
-  --color-ink-100: #e6eaf3;
-  --color-ink-50: #f4f6fa;
+  /* Paleta "Confiança premium": azul-marinho + verde-esmeralda de destaque */
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #13305a;
+  --color-navy-700: #1e4176;
 
-  --color-ember-600: #b3450c;
-  --color-ember-500: #d1590f;
-  --color-ember-400: #e57426;
-  --color-ember-100: #fbe4d2;
+  --color-emerald-700: #047857;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-50: #ecfdf5;
 
-  --color-paper: #faf8f4;
+  --color-surface: #f7f9fc;
+  --color-ink-900: #0f172a;
+  --color-ink-500: #475569;
+  --color-border: #e2e8f0;
 
-  --font-serif-editorial: 'Source Serif 4', ui-serif, Georgia, serif;
-  --font-sans-editorial: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-control: 12px;
 }
 
 @layer base {
   html {
-    font-family: var(--font-sans-editorial);
-    background-color: var(--color-paper);
-    color: var(--color-ink-950);
+    font-family: var(--font-body);
+    background-color: var(--color-surface);
+    color: var(--color-ink-900);
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-serif-editorial);
+    font-family: var(--font-heading);
     letter-spacing: -0.01em;
   }
 
   ::selection {
-    background-color: var(--color-ember-100);
-    color: var(--color-ink-950);
+    background-color: var(--color-emerald-50);
+    color: var(--color-navy-900);
+  }
+
+  /* Foco visível no teclado, consistente em qualquer elemento interativo */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid var(--color-emerald-500);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
@@ -70,7 +89,7 @@
   }
 
   .prose-article a {
-    color: var(--color-ember-600);
+    color: var(--color-emerald-700);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -86,14 +105,14 @@
   }
 
   .prose-article blockquote {
-    border-left: 3px solid var(--color-ember-500);
+    border-left: 3px solid var(--color-emerald-500);
     padding-left: 1rem;
     font-style: italic;
-    color: var(--color-ink-700);
+    color: var(--color-ink-500);
   }
 
   .prose-article code {
-    background-color: var(--color-ink-100);
+    background-color: var(--color-surface);
     padding: 0.125rem 0.375rem;
     border-radius: 0.25rem;
     font-size: 0.875em;
@@ -108,13 +127,38 @@
   }
 
   .prose-article th, .prose-article td {
-    border: 1px solid var(--color-ink-200);
+    border: 1px solid var(--color-border);
     padding: 0.5rem 0.75rem;
     text-align: left;
   }
 
   .prose-article th {
-    background-color: var(--color-ink-50);
+    background-color: var(--color-surface);
     font-weight: 600;
+  }
+}
+
+/* ── Animação de rolagem (reveal) ──────────────────────────────────────────
+   Progressive enhancement: por padrão (sem JS, ou JS ainda não rodou) o
+   conteúdo já está 100% visível. Só quando `js-reveal-ready` é adicionado ao
+   <html> pelo script de animação é que os elementos [data-reveal] começam
+   ocultos, prontos pra entrar — e mesmo assim só se o visitante não pediu
+   `prefers-reduced-motion: reduce`. */
+html.js-reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+html.js-reveal-ready [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal-ready [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
