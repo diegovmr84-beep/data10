@@ -1,5 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#101a30"/>
-  <text x="80" y="330" font-family="Georgia, serif" font-size="120" font-weight="700" fill="#ffffff">Data<tspan fill="#d1590f">10</tspan></text>
-  <text x="80" y="400" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="30" fill="#c7d0e2"><tspan fill="#d1590f">&gt;</tspan> consultoria em captação de recursos<tspan fill="#d1590f">_</tspan></text>
+  <rect width="1200" height="630" fill="#0b1f3a"/>
+
+  <!-- rede de conexões decorativa convergindo pro "$", ecoando o grafo do hero -->
+  <g stroke="#34d399" stroke-width="2" stroke-opacity="0.35" fill="none">
+    <path d="M980,315 L870,190"/>
+    <path d="M980,315 L1000,150"/>
+    <path d="M980,315 L1120,210"/>
+    <path d="M980,315 L1130,380"/>
+    <path d="M980,315 L1050,470"/>
+    <path d="M980,315 L900,440"/>
+    <path d="M980,315 L840,330"/>
+  </g>
+  <g fill="#34d399">
+    <circle cx="870" cy="190" r="7"/>
+    <circle cx="1000" cy="150" r="7"/>
+    <circle cx="1120" cy="210" r="7"/>
+    <circle cx="1130" cy="380" r="7"/>
+    <circle cx="1050" cy="470" r="7"/>
+    <circle cx="900" cy="440" r="7"/>
+    <circle cx="840" cy="330" r="7"/>
+  </g>
+  <circle cx="980" cy="315" r="34" fill="#10b981"/>
+  <text x="980" y="317" text-anchor="middle" dominant-baseline="central" font-family="DejaVu Sans, Arial, sans-serif" font-weight="800" font-size="34" fill="#0b1f3a">$</text>
+
+  <text x="80" y="330" font-family="DejaVu Sans, Arial, sans-serif" font-size="110" font-weight="700" fill="#ffffff">Data<tspan fill="#34d399">10</tspan></text>
+  <text x="80" y="400" font-family="DejaVu Sans, Arial, sans-serif" font-size="32" fill="#c7d0e2">Consultoria em captação de recursos</text>
 </svg>

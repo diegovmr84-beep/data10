@@ -64,7 +64,7 @@ const caminhos = [
             </radialGradient>
           </defs>
 
-          <circle cx="200" cy="210" r="100" fill="url(#hub-glow)" />
+          <circle class="network-hub-glow" cx="200" cy="210" r="100" fill="url(#hub-glow)" />
 
           <g stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4" fill="none">
             <path class="network-line" d="M200,210 L90,110" />
@@ -81,8 +81,18 @@ const caminhos = [
             <path d="M120,340 L60,230" />
           </g>
 
-          <circle cx="200" cy="210" r="11" fill="#34d399" />
-          <circle cx="200" cy="210" r="11" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
+          <circle cx="200" cy="210" r="27" fill="#10b981" />
+          <circle cx="200" cy="210" r="27" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
+          <text
+            x="200"
+            y="211"
+            text-anchor="middle"
+            dominant-baseline="central"
+            font-family="'Plus Jakarta Sans', Arial, sans-serif"
+            font-weight="800"
+            font-size="28"
+            fill="#0b1f3a"
+          >$</text>
 
           <g fill="#34d399">
             <circle class="network-node" cx="90" cy="110" r="5" />
@@ -120,6 +130,10 @@ const caminhos = [
     transform-origin: center;
     transform-box: fill-box;
   }
+  .network-hub-glow {
+    transform-origin: center;
+    transform-box: fill-box;
+  }
 
   @media (prefers-reduced-motion: no-preference) {
     .network-line {
@@ -127,6 +141,21 @@ const caminhos = [
     }
     .network-node {
       animation: network-node-pulse 3s ease-in-out infinite;
+    }
+    .network-hub-glow {
+      animation: network-hub-pulse 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes network-hub-pulse {
+    0%,
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.08);
     }
   }
 
