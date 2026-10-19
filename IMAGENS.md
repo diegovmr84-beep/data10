@@ -1,36 +1,44 @@
-# Imagens do redesign (branch `redesign-confianca-premium`)
+# Imagens do site
 
-## Usada: seção "ambiente de trabalho tranquilo" (home)
+## Fotos enviadas diretamente pelo Diego (19/10/2026)
 
-- **Arquivo**: `src/assets/images/ambiente-trabalho-organizado.jpg`
-- **Origem**: Unsplash — foto "Diverse team collaborating around a table in office"
-- **Fotógrafo**: Vitaly Gariev
-- **Link da página**: https://unsplash.com/photos/diverse-team-collaborating-around-a-table-in-office-oiqFyLx_KDU
-- **Licença**: Unsplash License (uso comercial livre, sem exigência de atribuição — creditado aqui por boa prática)
+As quatro fotos abaixo foram enviadas pelo responsável do site pelo chat,
+não buscadas em banco de imagens por mim. **Preciso que você confirme a
+origem e a licença de uso comercial de cada uma** (foto própria, banco de
+imagens pago, etc.) para eu documentar certinho aqui — por enquanto ficou
+marcado como `[PREENCHER]` abaixo.
 
-## Não usada: hero da home — ficou como placeholder
+### Hero da home
 
-Tentei três fotos candidatas pro hero (duas de um time em escritório, uma
-delas de fotógrafo brasileiro em "Copa Network, Brazil") e nenhuma bateu bem
-com o pedido — uma ficou escura demais e com um elemento gráfico estranho
-sobreposto ao vidro, a outra mostrava um time pouco diverso, em postura muito
-casual (pernas na mesa), sem o tom "confiança premium" pedido. Descartei as
-três em vez de usar uma imagem que destoasse do resultado.
+- **Arquivo**: `src/assets/images/equipe-escritorio-hero.jpg`
+- **Usada em**: `src/components/HomeHero.astro` (substituiu o placeholder
+  estilizado que existia ali)
+- **Fonte/licença**: `[PREENCHER]`
 
-**O que ficou no lugar**: um placeholder estilizado (gradiente marinho/verde,
-sem foto real) no componente `src/components/HomeHero.astro`, com o card
-flutuante dos "7 caminhos" sobreposto, do jeito que ficaria com a foto real.
+### Seção "Processo conduzido com calma" (home)
 
-**Termo de busca sugerido**, pra você baixar manualmente (Unsplash ou
-Pexels, licença de uso comercial):
-- "diverse business team office natural light" / "equipe diversa escritório luz natural"
-- "confident professionals meeting bright office"
-- Evitar fotos com pose muito rígida, iluminação escura, ou elemento gráfico
-  estranho sobreposto à cena.
+- **Arquivo**: `src/assets/images/reuniao-equipe-diversa.jpg`
+- **Usada em**: `src/components/TrustSection.astro` (substituiu a foto do
+  Unsplash usada antes — ver histórico de commits se precisar recuperá-la)
+- **Fonte/licença**: `[PREENCHER]`
 
-**Como substituir depois**: salve a foto escolhida em
-`src/assets/images/hero-equipe.jpg`, importe com
-`import heroImg from '../assets/images/hero-equipe.jpg'` no topo de
-`HomeHero.astro`, e troque o `<div class="hero-photo-placeholder">` por
-`<Image src={heroImg} alt="..." widths={[480, 800, 1200]} sizes="(min-width: 1024px) 560px, 100vw" />`
-(o import de `Image` de `astro:assets` já está disponível no projeto).
+### Seção "Experiência" (página Sobre)
+
+- **Arquivo**: `src/assets/images/lideranca-conversa.jpg`
+- **Usada em**: `src/pages/sobre.astro` (seção nova, antes a página não
+  tinha foto)
+- **Fonte/licença**: `[PREENCHER]`
+
+### Seção "Como atuamos" (página Captação de Recursos)
+
+- **Arquivo**: `src/assets/images/reuniao-captacao.jpg`
+- **Usada em**: `src/pages/servicos-captacao.astro` (seção nova, antes a
+  página não tinha foto)
+- **Fonte/licença**: `[PREENCHER]`
+
+## Histórico
+
+A primeira versão do redesign ("Confiança premium") usou uma foto do
+Unsplash (Vitaly Gariev, Unsplash License) na seção de confiança da home e
+deixou o hero como placeholder estilizado, por não ter uma foto que
+batesse bem com o pedido. As quatro fotos acima substituem essa versão.

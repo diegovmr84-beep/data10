@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/equipe-escritorio-hero.jpg';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const caminhos = [
@@ -34,7 +37,7 @@ const caminhos = [
         Transformamos sua ideia em <span class="text-emerald-400">recurso captado</span>
       </h1>
       <p data-reveal class="mt-6 max-w-lg text-lg leading-relaxed text-white/75">
-        Elaboração de projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de
+        Elaboramos projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de
         captação — para OSCs, empresas e pessoas físicas. Também temos o Data10 Recursos, sistema que conduz esse
         processo etapa por etapa, e desenvolvemos sites e aplicativos sob medida.
       </p>
@@ -55,11 +58,16 @@ const caminhos = [
     </div>
 
     <div data-reveal class="relative">
-      <div class="hero-photo-placeholder aspect-[4/5] w-full rounded-[--radius-card] border border-white/10 bg-gradient-to-br from-navy-700 via-navy-800 to-navy-900 shadow-2xl">
-        <div class="flex h-full flex-col items-center justify-center gap-3 p-8 text-center text-white/35">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
-          <p class="text-xs font-medium">[PREENCHER: foto de equipe em escritório — ver IMAGENS.md]</p>
-        </div>
+      <div class="aspect-[4/5] w-full overflow-hidden rounded-[--radius-card] border border-white/10 shadow-2xl">
+        <Image
+          src={heroImg}
+          alt="Equipe reunida ao redor da mesa, trabalhando em conjunto em escritório moderno e bem iluminado"
+          widths={[480, 800, 1200]}
+          sizes="(min-width: 1024px) 560px, 100vw"
+          loading="eager"
+          fetchpriority="high"
+          class="h-full w-full object-cover"
+        />
       </div>
 
       {/* card flutuante */}

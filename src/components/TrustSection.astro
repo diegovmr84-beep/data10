@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import ambienteImg from '../assets/images/ambiente-trabalho-organizado.jpg';
+import ambienteImg from '../assets/images/reuniao-equipe-diversa.jpg';
 
 const pontos = [
   'Projeto bem feito, sem pressa, com cada exigência da fonte conferida antes do envio.',
@@ -14,7 +14,7 @@ const pontos = [
     <div data-reveal class="overflow-hidden rounded-[--radius-card] shadow-2xl">
       <Image
         src={ambienteImg}
-        alt="Equipe reunida à mesa, analisando documentos com calma em ambiente de trabalho organizado e bem iluminado"
+        alt="Equipe diversa reunida em mesa redonda, discutindo dados e orçamento do projeto em ambiente bem iluminado"
         widths={[480, 800, 1200]}
         sizes="(min-width: 1024px) 560px, 100vw"
         loading="lazy"
@@ -25,7 +25,7 @@ const pontos = [
     <div data-reveal-group>
       <p data-reveal class="text-sm font-semibold uppercase tracking-widest text-emerald-400">Segurança e organização</p>
       <h2 data-reveal class="mt-3 max-w-md font-heading text-3xl font-bold leading-tight sm:text-4xl">
-        Processo conduzido com calma, do jeito que dinheiro público e privado exige
+        Processo conduzido com calma, do jeito que dinheiro público e privado exigem
       </h2>
       <ul class="mt-8 flex flex-col gap-5">
         {pontos.map((p) => (

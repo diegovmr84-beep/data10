@@ -1,33 +1,35 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import reuniaoImg from '../assets/images/reuniao-captacao.jpg';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const servicos = [
   {
     title: 'Leis de incentivo fiscal',
-    body: 'Elaboração de projetos para captação via lei de incentivo (dedução de IR ou crédito de ICMS), nas esferas federal, estadual e municipal — cultura, esporte e outras áreas, como criança e adolescente, pessoa idosa, saúde e PCD.',
+    body: 'Elaboramos projetos para captação via lei de incentivo (dedução de IR ou crédito de ICMS), nas esferas federal, estadual e municipal — cultura, esporte e outras áreas, como criança e adolescente, pessoa idosa, saúde e PCD.',
   },
   {
     title: 'Recurso público e editais',
-    body: 'Levantamento de edital, chamamento público e subvenção compatíveis com o seu projeto, além de apoio na articulação de emenda parlamentar — com a proposta completa, dentro das exigências de cada fonte.',
+    body: 'Levantamos editais, chamamentos públicos e subvenções compatíveis com o seu projeto, e apoiamos a articulação de emenda parlamentar — com a proposta completa, dentro das exigências de cada fonte.',
   },
   {
     title: 'Patrocínio e captação privada',
-    body: 'Busca ativa de patrocinador, apoiador e doador, com material de apresentação do projeto adequado ao público empresarial.',
+    body: 'Buscamos ativamente patrocinadores, apoiadores e doadores, com material de apresentação do projeto adequado ao público empresarial.',
   },
   {
     title: 'Crédito, investidores e renda própria',
-    body: 'Orientação sobre linha de crédito, financiamento e, para empresa, captação com investidor — além de estratégia de geração de renda própria ligada à causa.',
+    body: 'Orientamos sobre linha de crédito, financiamento e, para empresa, captação com investidor, além de apoiar na estratégia de geração de renda própria ligada à causa.',
   },
   {
     title: 'Habilitações e certificações',
-    body: 'Apoio na obtenção de certidão, registro e certificado exigidos antes de captar — como CEBAS, OSCIP, registro em conselho ou a certidão da Lei Pelé.',
+    body: 'Apoiamos na obtenção de certidões, registros e certificados exigidos antes de captar — como CEBAS, OSCIP, registro em conselho ou a certidão da Lei Pelé.',
   },
   {
     title: 'Acompanhamento e prestação de contas',
-    body: 'Suporte durante a execução do projeto e na prestação de contas exigida pelo mecanismo de captação utilizado.',
+    body: 'Damos suporte durante a execução do projeto e na prestação de contas exigida pelo mecanismo de captação utilizado.',
   },
 ];
 ---
@@ -45,6 +47,31 @@ const servicos = [
     Veja também o <a href={`${base}/sistema/`} class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Data10 Recursos</a>, nosso sistema com os 7 caminhos de captação mapeados.
   </p>
 
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto grid max-w-5xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
+      <div data-reveal class="overflow-hidden rounded-[--radius-card] shadow-lg">
+        <Image
+          src={reuniaoImg}
+          alt="Equipe reunida em sala de reunião, analisando documentos e dados do projeto"
+          widths={[480, 800, 1200]}
+          sizes="(min-width: 1024px) 480px, 100vw"
+          loading="lazy"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div data-reveal-group>
+        <p data-reveal class="text-sm font-semibold uppercase tracking-widest text-emerald-700">Como atuamos</p>
+        <h2 data-reveal class="mt-3 font-heading text-2xl font-bold text-ink-900 sm:text-3xl">
+          Projetos conduzidos com atenção a cada detalhe
+        </h2>
+        <p data-reveal class="mt-4 leading-relaxed text-ink-500">
+          Reunimos as exigências de cada fonte, organizamos a documentação e acompanhamos o processo até a
+          prestação de contas — para que você possa focar no que importa: o seu projeto.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-surface py-16 sm:py-20">
     <div class="mx-auto max-w-5xl px-4 sm:px-6">
       <div data-reveal-group class="grid gap-6 sm:grid-cols-2">
@@ -58,7 +85,7 @@ const servicos = [
 
       <div data-reveal class="mt-10 rounded-[--radius-card] bg-navy-900 p-10 text-center text-white">
         <h2 class="font-heading text-xl font-bold">Quer saber se seu projeto se encaixa?</h2>
-        <p class="mt-2 text-white/70">Fale com a gente e vamos avaliar junto qual mecanismo de captação faz mais sentido.</p>
+        <p class="mt-2 text-white/70">Fale conosco e vamos avaliar juntos qual mecanismo de captação faz mais sentido.</p>
         <a href={`${base}/contato/`} class="mt-6 inline-block rounded-[--radius-control] bg-emerald-500 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-emerald-600">
           Fale conosco
         </a>
