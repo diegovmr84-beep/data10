@@ -67,11 +67,6 @@ const caminhos = [
         >
           <source src={`${base}/videos/hero-rede-digital.mp4`} type="video/mp4" />
         </video>
-
-        {/* nó central sobreposto: o recurso captado, no ponto de fuga do vídeo */}
-        <div class="hero-dollar-badge pointer-events-none absolute left-[49%] top-[46%] flex h-[54px] w-[54px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-emerald-500 font-heading text-2xl font-extrabold text-navy-900 shadow-[0_0_30px_rgba(16,185,129,0.6)]">
-          $
-        </div>
       </div>
 
       {/* card flutuante */}
@@ -89,26 +84,6 @@ const caminhos = [
     </div>
   </div>
 </section>
-
-<style>
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-dollar-badge {
-      animation: hero-dollar-pulse 3s ease-in-out infinite;
-    }
-  }
-
-  @keyframes hero-dollar-pulse {
-    0%,
-    100% {
-      opacity: 0.9;
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.08);
-    }
-  }
-</style>
 
 <script>
   const video = document.querySelector<HTMLVideoElement>('.hero-network-video');
