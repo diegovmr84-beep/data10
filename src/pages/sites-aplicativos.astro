@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const itens = [
+  {
+    title: 'Sites institucionais',
+    body: 'Para pessoa jurídica ou pessoa física que precisa de presença digital profissional — com painel para você gerenciar o próprio conteúdo depois da entrega, sem depender de nós para cada atualização.',
+  },
+  {
+    title: 'Aplicativos sob medida',
+    body: 'Desenvolvimento de aplicativo de acordo com a necessidade do seu negócio ou projeto.',
+  },
+];
+---
+
+<BaseLayout
+  title="Sites e Aplicativos"
+  description="Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para o cliente gerenciar o próprio conteúdo."
+>
+  <section class="border-b border-ink-100 bg-ink-950 text-white">
+    <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
+      <p class="text-sm font-semibold uppercase tracking-widest text-ember-400">Serviços</p>
+      <h1 class="mt-4 font-serif-editorial text-3xl font-bold leading-tight sm:text-4xl">Sites e Aplicativos</h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-200">
+        Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para você mesmo gerenciar
+        o conteúdo depois da entrega.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-14 sm:px-6">
+    <div class="flex flex-col gap-8">
+      {itens.map((item) => (
+        <div class="border-b border-ink-100 pb-8 last:border-0">
+          <h2 class="font-serif-editorial text-xl font-bold text-ink-950">{item.title}</h2>
+          <p class="mt-2 text-ink-700">{item.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-lg bg-ink-50 p-8 text-center">
+      <h2 class="font-serif-editorial text-xl font-bold text-ink-950">Tem um projeto de site ou app em mente?</h2>
+      <p class="mt-2 text-ink-700">Conta pra gente o que você precisa e vamos avaliar o melhor caminho.</p>
+      <a href={`${base}/contato/`} class="mt-5 inline-block rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
+        Fale conosco
+      </a>
+    </div>
+  </section>
+</BaseLayout>

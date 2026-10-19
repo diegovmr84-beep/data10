@@ -4,19 +4,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    # Atualiza a tabela do Brasileirão e das ligas internacionais automaticamente todo dia.
-    # Horário em UTC. Miramos a madrugada (05:07 UTC ≈ 02:07 no horário de
-    # Brasília, UTC-3) de propósito, não a manhã: workflows agendados por
-    # `schedule` no GitHub Actions não têm horário garantido e, na prática,
-    # observamos atrasos de 2h40 a 5h17 nesse repositório — agendar já de
-    # manhã fazia o post sair pronto só perto do meio-dia. Rodando de
-    # madrugada, mesmo o pior atraso já visto ainda entrega dados
-    # atualizados bem antes do horário em que os leitores checam resultados
-    # ao acordar. O minuto quebrado (:07, não :00) evita o pico de fila que
-    # o GitHub tem exatamente nas horas cheias, quando a maioria dos
-    # workflows do mundo todo está agendada.
-    - cron: '7 5 * * *'
 
 permissions:
   contents: read
@@ -34,11 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Fixa main explicitamente: disparos por `schedule` (cron) fazem
-          # checkout da default branch do repositório, não necessariamente
-          # main — se a default branch do repo ficar desatualizada ou for
-          # outra (ex: uma branch de feature antiga), o cron diário
-          # republicaria conteúdo velho por cima do último deploy real.
           ref: main
 
       - name: Setup Node
@@ -49,11 +31,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Fetch tabela, casa/fora, sequência e artilheiros (football-data.org)
-        env:
-          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
-        run: node scripts/fetch-football-data.mjs
 
       - name: Build site
         run: npm run build

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout
+  title="Sobre"
+  description="Conheça a Data10, consultoria em produção de projetos para captação de recursos liderada por Diego Valois da Mota Ribeiro, em João Pessoa/PB."
+>
+  <article class="prose-article mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+    <h1 class="font-serif-editorial text-3xl font-bold text-ink-950 sm:text-4xl">Sobre</h1>
+
+    <p>
+      A <strong>Data10</strong> é uma consultoria em produção de projetos para captação de recursos, com sede em
+      João Pessoa/PB, liderada por <strong>Diego Valois da Mota Ribeiro</strong>.
+    </p>
+
+    <h2>Experiência</h2>
+    <p>
+      [PREENCHER: tempo de atuação, formação e histórico profissional de Diego Valois na área de captação de
+      recursos, leis de incentivo, emendas parlamentares e patrocínio.]
+    </p>
+
+    <h2>Como trabalhamos</h2>
+    <p>
+      Atendemos organizações da sociedade civil (OSCs), empresas e pessoas físicas que precisam estruturar um
+      projeto para captar recurso — seja via lei de incentivo, edital público ou privado, emenda parlamentar ou
+      patrocínio empresarial. Também desenvolvemos sites e aplicativos sob medida, com painel para o próprio
+      cliente gerenciar o conteúdo.
+    </p>
+
+    <h2>Onde estamos</h2>
+    <p>João Pessoa / PB, Brasil — atendimento remoto para todo o país.</p>
+
+    <div class="not-prose mt-10 rounded-lg bg-ink-50 p-8 text-center">
+      <h2 class="font-serif-editorial text-xl font-bold text-ink-950">Vamos conversar sobre o seu projeto?</h2>
+      <a href={`${base}/contato/`} class="mt-5 inline-block rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
+        Fale conosco
+      </a>
+    </div>
+  </article>
+</BaseLayout>

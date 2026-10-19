@@ -1,27 +1,18 @@
 ---
-import { useTranslations, type Lang } from '../i18n/utils';
-import LanguageSwitcher from './LanguageSwitcher.astro';
-
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-const t = useTranslations(lang);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const nav = [
-  { href: `${base}/${lang}/`, label: t('nav.home') },
-  { href: `${base}/${lang}/blog/`, label: t('nav.blog') },
-  { href: `${base}/${lang}/glossario/`, label: t('nav.glossario') },
-  { href: `${base}/${lang}/dashboards/`, label: t('nav.dashboards') },
-  { href: `${base}/${lang}/sobre/`, label: t('nav.sobre') },
+  { href: `${base}/`, label: 'Início' },
+  { href: `${base}/servicos-captacao/`, label: 'Captação de Recursos' },
+  { href: `${base}/sites-aplicativos/`, label: 'Sites e Aplicativos' },
+  { href: `${base}/sobre/`, label: 'Sobre' },
+  { href: `${base}/contato/`, label: 'Contato' },
 ];
 ---
 
 <header class="border-b border-ink-100 bg-paper/95 backdrop-blur supports-[backdrop-filter]:sticky supports-[backdrop-filter]:top-0 z-40">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-    <a href={`${base}/${lang}/`} class="font-serif-editorial text-2xl font-bold tracking-tight text-ink-950">
+    <a href={`${base}/`} class="font-serif-editorial text-2xl font-bold tracking-tight text-ink-950">
       Data<span class="text-ember-500">10</span>
     </a>
 
@@ -34,7 +25,12 @@ const nav = [
     </nav>
 
     <div class="flex items-center gap-3">
-      <LanguageSwitcher lang={lang} />
+      <a
+        href={`${base}/contato/`}
+        class="hidden rounded bg-ember-500 px-4 py-2 text-sm font-medium text-white hover:bg-ember-600 sm:inline-block"
+      >
+        Fale conosco
+      </a>
       <button
         id="mobile-menu-toggle"
         type="button"

@@ -1,60 +1,36 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { legacyRedirects } from './src/data/legacy-redirects.mjs';
 
 // Site hospedado no domínio próprio https://data10.app.br, via GitHub Pages
 // (CNAME em public/CNAME). Como o domínio serve a raiz diretamente, `base`
 // fica em '/' — se o site voltar a ser servido a partir de um subcaminho
 // (ex: usuario.github.io/data10/), ajuste `base` de volta para '/data10'.
 const base = '/';
-// Concatenar `${base}/pt/` com base = '/' geraria "//pt/" (barra dupla);
-// normalizamos para '' nesse caso só para montar os destinos abaixo.
-const baseForPaths = base === '/' ? '' : base;
 
 export default defineConfig({
   site: 'https://data10.app.br',
   base,
   trailingSlash: 'always',
 
-  i18n: {
-    defaultLocale: 'pt',
-    locales: ['pt', 'en', 'es'],
-    routing: {
-      prefixDefaultLocale: true,
-    },
-  },
-
-  // A raiz "/" redireciona para "/pt/". Astro NÃO prefixa `base`
-  // automaticamente nos destinos de `redirects`, então incluímos aqui.
-  redirects: {
-    '/': `${baseForPaths}/pt/`,
-  },
+  // URLs do antigo site (sistema de gestão esportiva) redirecionadas pras
+  // páginas novas mais próximas, ou pra home — ver src/data/legacy-redirects.mjs.
+  redirects: legacyRedirects,
 
   integrations: [
-    mdx(),
     sitemap({
-      // Exclui do sitemap as páginas em EN/ES que ainda são só "tradução
-      // pendente" (mesmas marcadas noIndex nos layouts) — hoje só a página
-      // de dashboards tem conteúdo real traduzido nesses dois idiomas.
-      // Página noindex listada no sitemap é sinal de conteúdo raso/site mal
-      // cuidado para o Google, e foi um dos motivos citados na recusa do
-      // AdSense por "conteúdo de baixo valor".
-      filter: (page) => {
-        const path = new URL(page).pathname;
-        const isStubLocale = path.startsWith(`${baseForPaths}/en/`) || path.startsWith(`${baseForPaths}/es/`);
-        const isTranslatedSection = path.includes('/dashboards/');
-        return !isStubLocale || isTranslatedSection;
-      },
+      // A página de privacidade é noindex (ver src/pages/privacidade.astro);
+      // excluir do sitemap evita mandar sinal contraditório ao Google.
+      filter: (page) => !page.includes('/privacidade/'),
     }),
   ],
 
   image: {
-    // As capas dos posts são SVG autorais (não vêm de usuários/fontes
-    // externas), então é seguro rasterizá-las — usado para gerar versões
-    // PNG das capas para og:image/twitter:image (X/Twitter não aceita SVG
-    // em preview de link).
+    // A imagem padrão de Open Graph é SVG autoral (não vem de usuário/fonte
+    // externa), então é seguro rasterizá-la — usado para gerar a versão PNG
+    // pra og:image/twitter:image (X/Twitter não aceita SVG em preview de link).
     dangerouslyProcessSVG: true,
   },
 

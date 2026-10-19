@@ -1,45 +1,44 @@
 ---
-import { useTranslations, type Lang } from '../i18n/utils';
-import AdSlot from './AdSlot.astro';
-
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-const t = useTranslations(lang);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const year = new Date().getFullYear();
+const whatsappNumber = '5583999596225';
+const email = 'diegovmr@protonmail.com';
 ---
 
 <footer class="mt-16 border-t border-ink-100 bg-ink-950 text-ink-100">
   <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-    <AdSlot placement="footer" class="mb-8" />
-
     <div class="flex flex-col gap-8 sm:flex-row sm:justify-between">
       <div class="max-w-sm">
         <p class="font-serif-editorial text-xl font-bold">
           Data<span class="text-ember-400">10</span>
         </p>
-        <p class="mt-2 text-sm text-ink-400">{t('footer.madeWith')}</p>
+        <p class="mt-2 text-sm text-ink-400">
+          Consultoria em produção de projetos para captação de recursos — leis de incentivo, editais, emendas
+          parlamentares e patrocínio — e criação de sites e aplicativos.
+        </p>
+        <p class="mt-4 text-sm text-ink-400">João Pessoa / PB</p>
       </div>
 
       <div class="flex gap-10 text-sm">
         <div class="flex flex-col gap-2">
-          <a href={`${base}/${lang}/blog/`} class="hover:text-ember-400">{t('nav.blog')}</a>
-          <a href={`${base}/${lang}/glossario/`} class="hover:text-ember-400">{t('nav.glossario')}</a>
-          <a href={`${base}/${lang}/dashboards/`} class="hover:text-ember-400">{t('nav.dashboards')}</a>
+          <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-ink-500">Navegação</p>
+          <a href={`${base}/servicos-captacao/`} class="hover:text-ember-400">Captação de Recursos</a>
+          <a href={`${base}/sites-aplicativos/`} class="hover:text-ember-400">Sites e Aplicativos</a>
+          <a href={`${base}/sobre/`} class="hover:text-ember-400">Sobre</a>
         </div>
         <div class="flex flex-col gap-2">
-          <a href={`${base}/${lang}/sobre/`} class="hover:text-ember-400">{t('nav.sobre')}</a>
-          <a href={`${base}/${lang}/privacidade/`} class="hover:text-ember-400">{t('footer.privacy')}</a>
-          <a href={`${base}/${lang}/termos/`} class="hover:text-ember-400">{t('footer.terms')}</a>
+          <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-ink-500">Contato</p>
+          <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" class="hover:text-ember-400">
+            WhatsApp
+          </a>
+          <a href={`mailto:${email}`} class="hover:text-ember-400">{email}</a>
+          <a href={`${base}/privacidade/`} class="hover:text-ember-400">Política de Privacidade</a>
         </div>
       </div>
     </div>
 
     <p class="mt-10 border-t border-ink-800 pt-6 text-xs text-ink-400">
-      &copy; {year} Data10. {t('footer.rights')}
+      &copy; {year} Data10. Todos os direitos reservados.
     </p>
   </div>
 </footer>

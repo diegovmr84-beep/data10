@@ -1,28 +1,24 @@
 ---
-import { useTranslations, type Lang } from '../i18n/utils';
-
 interface Props {
-  lang: Lang;
   privacyHref: string;
 }
 
-const { lang, privacyHref } = Astro.props;
-const t = useTranslations(lang);
+const { privacyHref } = Astro.props;
 ---
 
 <div id="cookie-consent" class="cookie-consent" hidden>
   <div class="mx-auto flex max-w-4xl flex-col gap-3 p-4 text-sm sm:flex-row sm:items-center sm:justify-between">
     <p class="text-ink-100">
-      {t('cookies.message')}
+      Usamos cookies para analisar o uso do site e melhorar sua experiência.
       {' '}
-      <a href={privacyHref} class="underline underline-offset-2 hover:text-ember-400">{t('cookies.linkText')}</a>.
+      <a href={privacyHref} class="underline underline-offset-2 hover:text-ember-400">Saiba mais</a>.
     </p>
     <div class="flex shrink-0 gap-2">
       <button id="cookie-decline" type="button" class="rounded border border-ink-600 px-3 py-1.5 text-ink-100 hover:border-ink-400">
-        {t('cookies.decline')}
+        Recusar
       </button>
       <button id="cookie-accept" type="button" class="rounded bg-ember-500 px-3 py-1.5 font-medium text-white hover:bg-ember-600">
-        {t('cookies.accept')}
+        Aceitar
       </button>
     </div>
   </div>
