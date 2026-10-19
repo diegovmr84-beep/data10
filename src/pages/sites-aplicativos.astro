@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import equipeImg from '../assets/images/equipe-escritorio-digital.jpg';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -25,6 +27,31 @@ const itens = [
     title="Sites e Aplicativos"
     subtitle="Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para você mesmo gerenciar o conteúdo depois da entrega."
   />
+
+  <section class="bg-white py-16 sm:py-20">
+    <div class="mx-auto grid max-w-5xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
+      <div data-reveal-group class="order-2 lg:order-1">
+        <p data-reveal class="text-sm font-semibold uppercase tracking-widest text-emerald-700">Como entregamos</p>
+        <h2 data-reveal class="mt-3 font-heading text-2xl font-bold text-ink-900 sm:text-3xl">
+          Projeto digital do primeiro rascunho à publicação
+        </h2>
+        <p data-reveal class="mt-4 leading-relaxed text-ink-500">
+          Cuidamos de cada etapa, da estrutura ao conteúdo, e deixamos tudo pronto para você atualizar sozinho
+          depois, sem depender de nós para cada mudança.
+        </p>
+      </div>
+      <div data-reveal class="order-1 overflow-hidden rounded-[--radius-card] shadow-lg lg:order-2">
+        <Image
+          src={equipeImg}
+          alt="Equipe trabalhando em notebook e ao telefone em escritório moderno, discutindo um projeto digital"
+          widths={[480, 800, 1200]}
+          sizes="(min-width: 1024px) 480px, 100vw"
+          loading="lazy"
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
 
   <section class="bg-surface py-16 sm:py-20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6">

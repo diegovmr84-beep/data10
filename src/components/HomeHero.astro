@@ -1,7 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import heroImg from '../assets/images/equipe-escritorio-hero.jpg';
-
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const caminhos = [
@@ -58,16 +55,45 @@ const caminhos = [
     </div>
 
     <div data-reveal class="relative">
-      <div class="aspect-[4/5] w-full overflow-hidden rounded-[--radius-card] border border-white/10 shadow-2xl">
-        <Image
-          src={heroImg}
-          alt="Equipe reunida ao redor da mesa, trabalhando em conjunto em escritório moderno e bem iluminado"
-          widths={[480, 800, 1200]}
-          sizes="(min-width: 1024px) 560px, 100vw"
-          loading="eager"
-          fetchpriority="high"
-          class="h-full w-full object-cover"
-        />
+      <div class="aspect-[4/5] w-full overflow-hidden rounded-[--radius-card] border border-white/10 bg-gradient-to-br from-navy-700 via-navy-800 to-navy-900 shadow-2xl">
+        <svg class="network-graphic h-full w-full" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#34d399" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <circle cx="200" cy="210" r="100" fill="url(#hub-glow)" />
+
+          <g stroke="#34d399" stroke-width="1.5" stroke-opacity="0.4" fill="none">
+            <path class="network-line" d="M200,210 L90,110" />
+            <path class="network-line" d="M200,210 L200,70" style="animation-delay:.3s" />
+            <path class="network-line" d="M200,210 L300,90" style="animation-delay:.6s" />
+            <path class="network-line" d="M200,210 L340,220" style="animation-delay:.9s" />
+            <path class="network-line" d="M200,210 L280,330" style="animation-delay:1.2s" />
+            <path class="network-line" d="M200,210 L120,340" style="animation-delay:1.5s" />
+            <path class="network-line" d="M200,210 L60,230" style="animation-delay:1.8s" />
+          </g>
+          <g stroke="#34d399" stroke-width="1" stroke-opacity="0.2" fill="none">
+            <path d="M90,110 L200,70" />
+            <path d="M300,90 L340,220" />
+            <path d="M120,340 L60,230" />
+          </g>
+
+          <circle cx="200" cy="210" r="11" fill="#34d399" />
+          <circle cx="200" cy="210" r="11" fill="none" stroke="white" stroke-opacity="0.4" stroke-width="1.5" />
+
+          <g fill="#34d399">
+            <circle class="network-node" cx="90" cy="110" r="5" />
+            <circle class="network-node" cx="200" cy="70" r="5" style="animation-delay:.3s" />
+            <circle class="network-node" cx="300" cy="90" r="5" style="animation-delay:.6s" />
+            <circle class="network-node" cx="340" cy="220" r="5" style="animation-delay:.9s" />
+            <circle class="network-node" cx="280" cy="330" r="5" style="animation-delay:1.2s" />
+            <circle class="network-node" cx="120" cy="340" r="5" style="animation-delay:1.5s" />
+            <circle class="network-node" cx="60" cy="230" r="5" style="animation-delay:1.8s" />
+          </g>
+        </svg>
       </div>
 
       {/* card flutuante */}
@@ -85,3 +111,40 @@ const caminhos = [
     </div>
   </div>
 </section>
+
+<style>
+  .network-line {
+    stroke-dasharray: 6 6;
+  }
+  .network-node {
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .network-line {
+      animation: network-dash-flow 8s linear infinite;
+    }
+    .network-node {
+      animation: network-node-pulse 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes network-dash-flow {
+    to {
+      stroke-dashoffset: -120;
+    }
+  }
+
+  @keyframes network-node-pulse {
+    0%,
+    100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.25);
+    }
+  }
+</style>
