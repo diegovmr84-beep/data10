@@ -1,124 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-const servicos = [
-  {
-    title: 'Captação de Recursos',
-    body: 'Projetos para leis de incentivo, editais públicos e privados, emendas parlamentares e patrocínio empresarial — do desenho à prestação de contas.',
-    href: `${base}/servicos-captacao/`,
-    cta: 'Ver serviços de captação',
-  },
-  {
-    title: 'Data10 Recursos (o sistema)',
-    body: 'A plataforma que mostra os 7 caminhos de captação disponíveis pro seu perfil, confere a regra em fonte oficial e te leva até o projeto pronto para enviar.',
-    href: `${base}/sistema/`,
-    cta: 'Conhecer o sistema',
-  },
-  {
-    title: 'Sites e Aplicativos',
-    body: 'Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para você mesmo gerenciar o conteúdo depois da entrega.',
-    href: `${base}/sites-aplicativos/`,
-    cta: 'Ver serviços digitais',
-  },
-];
-
-const etapas = [
-  {
-    numero: '01',
-    titulo: 'Diagnóstico',
-    body: 'Entendemos sua organização, seu projeto e qual mecanismo de captação (lei de incentivo, edital, emenda ou patrocínio) faz mais sentido.',
-  },
-  {
-    numero: '02',
-    titulo: 'Elaboração',
-    body: 'Produzimos o projeto completo — justificativa, orçamento, cronograma e demais exigências do mecanismo escolhido.',
-  },
-  {
-    numero: '03',
-    titulo: 'Submissão e busca de apoio',
-    body: 'Acompanhamos a submissão e, quando aplicável, a busca ativa por patrocinador ou apoiador.',
-  },
-  {
-    numero: '04',
-    titulo: 'Execução e prestação de contas',
-    body: 'Damos suporte durante a execução do projeto e na prestação de contas exigida pelo mecanismo.',
-  },
-];
+import HomeHero from '../components/HomeHero.astro';
+import CredibilityBand from '../components/CredibilityBand.astro';
+import ServicesShowcase from '../components/ServicesShowcase.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import TrustSection from '../components/TrustSection.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import FinalCta from '../components/FinalCta.astro';
 ---
 
 <BaseLayout
   title="Captação de Recursos e Sites"
   description="Consultoria em produção de projetos para captação de recursos — leis de incentivo, editais, emendas parlamentares e patrocínio — e criação de sites e aplicativos."
 >
-  <section class="border-b border-ink-100 bg-ink-950 text-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-      <p class="text-sm font-semibold uppercase tracking-widest text-ember-400">Consultoria em captação de recursos</p>
-      <h1 class="mt-4 max-w-2xl font-serif-editorial text-4xl font-bold leading-tight sm:text-5xl">
-        Transformamos sua ideia em recurso captado
-      </h1>
-      <p class="mt-5 max-w-xl text-lg text-ink-200">
-        Elaboração de projetos para lei de incentivo, recurso público, patrocínio, crédito e outras formas de
-        captação — para OSCs, empresas e pessoas físicas. Também temos o Data10 Recursos, sistema que conduz esse
-        processo etapa por etapa, e desenvolvemos sites e aplicativos sob medida.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href={`${base}/contato/`} class="rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
-          Fale conosco
-        </a>
-        <a href={`${base}/servicos-captacao/`} class="rounded border border-ink-600 px-5 py-3 font-medium text-ink-100 hover:border-ink-400">
-          Conheça os serviços
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-    <h2 class="font-serif-editorial text-2xl font-bold text-ink-950 sm:text-3xl">O que fazemos</h2>
-    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {servicos.map((s) => (
-        <a
-          href={s.href}
-          class="group flex flex-col justify-between rounded-lg border border-ink-200 bg-white p-7 transition-colors hover:border-ember-400 sm:p-8"
-        >
-          <div>
-            <h3 class="font-serif-editorial text-xl font-bold text-ink-950">{s.title}</h3>
-            <p class="mt-3 text-ink-700">{s.body}</p>
-          </div>
-          <span class="mt-6 inline-block text-sm font-medium text-ember-600 group-hover:underline">
-            {s.cta} →
-          </span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section class="border-y border-ink-100 bg-ink-50 py-14">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2 class="font-serif-editorial text-2xl font-bold text-ink-950 sm:text-3xl">Como funciona</h2>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {etapas.map((e) => (
-          <div class="rounded-lg bg-white p-6">
-            <p class="font-serif-editorial text-3xl font-bold text-ember-500">{e.numero}</p>
-            <h3 class="mt-2 font-semibold text-ink-950">{e.titulo}</h3>
-            <p class="mt-2 text-sm text-ink-700">{e.body}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
-    <h2 class="font-serif-editorial text-2xl font-bold text-ink-950 sm:text-3xl">Pronto para captar recurso para seu projeto?</h2>
-    <p class="mx-auto mt-3 max-w-xl text-ink-700">
-      Fale com a gente pelo WhatsApp ou pelo formulário de contato e vamos entender qual caminho faz mais sentido
-      pro seu caso.
-    </p>
-    <div class="mt-6">
-      <a href={`${base}/contato/`} class="rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
-        Fale conosco
-      </a>
-    </div>
-  </section>
+  <HomeHero />
+  <CredibilityBand />
+  <ServicesShowcase />
+  <HowItWorks />
+  <TrustSection />
+  <FaqAccordion />
+  <FinalCta />
 </BaseLayout>

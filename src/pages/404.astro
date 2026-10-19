@@ -5,11 +5,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Página não encontrada" description="A página que você procura não existe ou foi movida." noIndex>
-  <div class="mx-auto flex max-w-2xl flex-col items-center px-4 py-24 text-center sm:px-6">
-    <p class="font-serif-editorial text-7xl font-bold text-ember-500">404</p>
-    <h1 class="mt-4 font-serif-editorial text-3xl font-bold text-ink-950">Página não encontrada</h1>
-    <p class="mt-3 text-ink-700">A página que você procura não existe ou foi movida.</p>
-    <a href={`${base}/`} class="mt-8 rounded bg-ember-500 px-5 py-3 font-medium text-white hover:bg-ember-600">
+  <div class="flex min-h-[70vh] flex-col items-center justify-center bg-navy-900 px-4 pt-20 text-center text-white sm:px-6">
+    <p class="font-heading text-7xl font-extrabold text-emerald-400">404</p>
+    <h1 class="mt-4 font-heading text-3xl font-bold">Página não encontrada</h1>
+    <p class="mt-3 text-white/70">A página que você procura não existe ou foi movida.</p>
+    <a href={`${base}/`} class="mt-8 rounded-[--radius-control] bg-emerald-500 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-emerald-600">
       Voltar ao início
     </a>
   </div>

@@ -8,16 +8,16 @@ const { privacyHref } = Astro.props;
 
 <div id="cookie-consent" class="cookie-consent" hidden>
   <div class="mx-auto flex max-w-4xl flex-col gap-3 p-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-    <p class="text-ink-100">
+    <p class="text-white/85">
       Usamos cookies para analisar o uso do site e melhorar sua experiência.
       {' '}
-      <a href={privacyHref} class="underline underline-offset-2 hover:text-ember-400">Saiba mais</a>.
+      <a href={privacyHref} class="underline underline-offset-2 hover:text-emerald-400">Saiba mais</a>.
     </p>
     <div class="flex shrink-0 gap-2">
-      <button id="cookie-decline" type="button" class="rounded border border-ink-600 px-3 py-1.5 text-ink-100 hover:border-ink-400">
+      <button id="cookie-decline" type="button" class="rounded-[--radius-control] border border-white/25 px-3.5 py-2 text-white/85 transition-colors hover:border-white/50">
         Recusar
       </button>
-      <button id="cookie-accept" type="button" class="rounded bg-ember-500 px-3 py-1.5 font-medium text-white hover:bg-ember-600">
+      <button id="cookie-accept" type="button" class="rounded-[--radius-control] bg-emerald-500 px-3.5 py-2 font-semibold text-navy-900 transition-colors hover:bg-emerald-600">
         Aceitar
       </button>
     </div>
@@ -30,7 +30,7 @@ const { privacyHref } = Astro.props;
     inset-inline: 0;
     bottom: 0;
     z-index: 50;
-    background-color: var(--color-ink-900);
+    background-color: var(--color-navy-900);
     box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
   }
 </style>

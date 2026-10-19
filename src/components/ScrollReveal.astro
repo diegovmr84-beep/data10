@@ -1,0 +1,78 @@
+{/*
+  Reveal de rolagem leve, via IntersectionObserver + CSS (sem GSAP, pra manter
+  o site leve — ver CLAUDE.md/decisões de redesign). Progressive enhancement:
+  - Sem JS, ou com `prefers-reduced-motion: reduce`: todo [data-reveal] fica
+    100% visível o tempo todo (é o estado padrão do CSS em global.css).
+  - Com JS e sem preferência por menos movimento: a classe `js-reveal-ready`
+    é adicionada no <html>, o que ativa o estado inicial oculto via CSS; daí
+    o observer vai adicionando `.is-revealed` em cada elemento conforme ele
+    entra na tela, com um pequeno atraso em cascata (stagger) dentro de cada
+    grupo marcado com `data-reveal-group`.
+*/}
+<script>
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal-ready');
+
+    const STAGGER_MS = 90;
+
+    const revealGroupIndex = new WeakMap<Element, number>();
+    document.querySelectorAll('[data-reveal-group]').forEach((group) => {
+      Array.from(group.querySelectorAll('[data-reveal]')).forEach((el, i) => {
+        revealGroupIndex.set(el, i);
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const el = entry.target as HTMLElement;
+          const index = revealGroupIndex.get(el) ?? 0;
+          el.style.transitionDelay = `${Math.min(index, 8) * STAGGER_MS}ms`;
+          el.classList.add('is-revealed');
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+  }
+
+  // Preenchimento da linha do tempo ("Como funciona") conforme a rolagem.
+  const timeline = document.querySelector<HTMLElement>('[data-timeline]');
+  if (timeline && !prefersReducedMotion && 'IntersectionObserver' in window) {
+    const steps = Array.from(timeline.querySelectorAll<HTMLElement>('[data-timeline-step]'));
+    const fill = timeline.querySelector<HTMLElement>('[data-timeline-fill]');
+    // Começa em 0 só agora que sabemos que JS + animação vão rodar — o CSS
+    // já deixa a barra 100% cheia por padrão (ver global.css), pra quem não
+    // tem JS ver o conector completo desde o primeiro render.
+    if (fill) fill.style.width = '0%';
+    const stepObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const el = entry.target as HTMLElement;
+          el.classList.add('is-active');
+          const index = steps.indexOf(el);
+          if (fill && index >= 0) {
+            // Conector é horizontal (ver HowItWorks.astro): só a largura muda,
+            // a altura da barra já vem fixa por classe (h-full do pai de 2px).
+            const pct = steps.length <= 1 ? 100 : (index / (steps.length - 1)) * 100;
+            fill.style.width = `${pct}%`;
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+    steps.forEach((el) => stepObserver.observe(el));
+  } else if (timeline) {
+    // Sem JS/observer ou com redução de movimento: linha já cheia, nada a animar.
+    const fill = timeline.querySelector<HTMLElement>('[data-timeline-fill]');
+    if (fill) {
+      fill.style.width = '100%';
+    }
+  }
+</script>

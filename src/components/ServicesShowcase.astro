@@ -1,0 +1,89 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const servicos = [
+  {
+    title: 'Captação de Recursos',
+    beneficio: 'A gente conduz todo o processo de captação, do diagnóstico à prestação de contas.',
+    topicos: ['Lei de incentivo, recurso público, patrocínio e crédito', 'Projeto completo, dentro da exigência de cada fonte', 'Acompanhamento até a prestação de contas'],
+    href: `${base}/servicos-captacao/`,
+    cta: 'Ver serviços de captação',
+    novo: false,
+    icon: 'M3 3v18h18M7 14l4-4 3 3 5-6',
+  },
+  {
+    title: 'Data10 Recursos',
+    sub: '(o sistema)',
+    beneficio: 'A plataforma que mostra os 7 caminhos de captação disponíveis pro seu perfil e te leva até o projeto pronto.',
+    topicos: ['Regra conferida em fonte oficial, com data', 'Semáforo de elegibilidade por forma de captação', 'Exporta o documento pronto pra enviar'],
+    href: `${base}/sistema/`,
+    cta: 'Conhecer o sistema',
+    novo: true,
+    icon: 'M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7l3-7Z',
+  },
+  {
+    title: 'Sites e Aplicativos',
+    beneficio: 'Criação de site e aplicativo sob medida, com painel pra você mesmo gerenciar o conteúdo.',
+    topicos: ['Pra pessoa jurídica e pessoa física', 'Painel de gestão próprio, sem depender da gente depois', 'Entrega com domínio e hospedagem configurados'],
+    href: `${base}/sites-aplicativos/`,
+    cta: 'Ver serviços digitais',
+    novo: false,
+    icon: 'M4 5h16v12H4zM4 17l4 4h8l4-4M9 9h6M9 12h3',
+  },
+];
+---
+
+<section class="bg-surface py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-emerald-700">O que fazemos</p>
+      <h2 class="mt-3 font-heading text-3xl font-bold text-ink-900 sm:text-4xl">Três formas de levar seu projeto até o recurso</h2>
+    </div>
+
+    <div data-reveal-group class="mt-14 grid gap-6 lg:grid-cols-3">
+      {servicos.map((s) => (
+        <div
+          data-reveal
+          class:list={[
+            'group flex flex-col rounded-[--radius-card] border p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
+            s.novo ? 'border-emerald-500/40 bg-navy-900 text-white' : 'border-border bg-white text-ink-900',
+          ]}
+        >
+          <div class="flex items-start justify-between">
+            <div class:list={['flex h-12 w-12 items-center justify-center rounded-[--radius-control] transition-transform duration-300 group-hover:scale-110', s.novo ? 'bg-emerald-500/15' : 'bg-emerald-50']}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class:list={[s.novo ? 'text-emerald-400' : 'text-emerald-600']} aria-hidden="true"><path d={s.icon} /></svg>
+            </div>
+            {s.novo && (
+              <span class="rounded-full bg-emerald-500 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-navy-900">Novo</span>
+            )}
+          </div>
+
+          <h3 class="mt-6 font-heading text-xl font-bold">
+            {s.title} {s.sub && <span class:list={['text-sm font-medium', s.novo ? 'text-white/50' : 'text-ink-500']}>{s.sub}</span>}
+          </h3>
+          <p class:list={['mt-2 text-sm leading-relaxed', s.novo ? 'text-white/70' : 'text-ink-500']}>{s.beneficio}</p>
+
+          <ul class="mt-5 flex flex-col gap-2.5 text-sm">
+            {s.topicos.map((t) => (
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class:list={['mt-0.5 shrink-0', s.novo ? 'text-emerald-400' : 'text-emerald-600']} aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span class={s.novo ? 'text-white/80' : 'text-ink-900'}>{t}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={s.href}
+            class:list={[
+              'mt-7 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors',
+              s.novo ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-700 hover:text-emerald-800',
+            ]}
+          >
+            {s.cta}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
