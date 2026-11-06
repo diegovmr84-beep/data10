@@ -12,21 +12,32 @@ const itens = [
     body: 'Para pessoa jurídica ou pessoa física que precisa de presença digital profissional, com painel para você gerenciar o próprio conteúdo depois da entrega, sem depender de nós para cada atualização.',
   },
   {
-    title: 'Aplicativos sob medida',
-    body: 'Desenvolvimento de aplicativo de acordo com a necessidade do seu negócio ou projeto.',
+    title: 'Gestão do projeto',
+    body: 'Painel para acompanhar cronograma, documentos e etapas da elaboração e execução do seu projeto, construído sob medida para o jeito que a sua equipe trabalha.',
+  },
+  {
+    title: 'Gestão do recurso recebido',
+    body: 'Aplicativo para controlar o uso do recurso captado, com registro de gastos organizado do jeito que a prestação de contas exige.',
+  },
+  {
+    title: 'Prestação de contas',
+    body: 'Ferramenta para organizar a documentação e montar o relatório de prestação de contas, reduzindo retrabalho na hora de fechar o processo.',
   },
 ];
 ---
 
 <BaseLayout
   title="Sites e Aplicativos"
-  description="Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para o cliente gerenciar o próprio conteúdo."
+  description="Criação de sites e aplicativos sob medida para apoiar o seu projeto em cada etapa, da elaboração à prestação de contas, com treinamento para você usar por conta própria."
 >
   <PageHero
     eyebrow="Serviços"
     title="Sites e Aplicativos"
-    subtitle="Criação de sites e aplicativos para pessoa jurídica e pessoa física, com painel para você mesmo gerenciar o conteúdo depois da entrega."
+    subtitle="Ferramentas sob medida para apoiar o seu projeto em cada etapa, da elaboração à gestão do recurso recebido e à prestação de contas, com treinamento para você usar por conta própria."
   />
+  <p class="mx-auto -mt-6 max-w-4xl px-4 pb-2 text-sm text-ink-500 sm:px-6">
+    É diferente do <a href={`${base}/sistema/`} class="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Data10 Recursos</a>: o sistema ajuda a mapear o caminho de captação e produzir o projeto. Aqui, construímos sob medida para apoiar você depois, na execução, na gestão do recurso e na prestação de contas.
+  </p>
 
   <section class="bg-white py-16 sm:py-20">
     <div class="mx-auto grid max-w-5xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
@@ -36,8 +47,8 @@ const itens = [
           Projeto digital do primeiro rascunho à publicação
         </h2>
         <p data-reveal class="mt-4 leading-relaxed text-ink-500">
-          Cuidamos de cada etapa, da estrutura ao conteúdo, e deixamos tudo pronto para você atualizar sozinho
-          depois, sem depender de nós para cada mudança.
+          Cuidamos de cada etapa, da estrutura ao conteúdo, e deixamos tudo pronto para você usar sozinho
+          depois. Em toda entrega, incluímos o treinamento para a sua equipe operar a ferramenta com autonomia.
         </p>
       </div>
       <div data-reveal class="order-1 overflow-hidden rounded-[--radius-card] shadow-lg lg:order-2">
@@ -65,7 +76,7 @@ const itens = [
       </div>
 
       <div data-reveal class="mt-10 rounded-[--radius-card] bg-navy-900 p-10 text-center text-white">
-        <h2 class="font-heading text-xl font-bold">Tem um projeto de site ou app em mente?</h2>
+        <h2 class="font-heading text-xl font-bold">Quer uma ferramenta pra apoiar seu projeto do início ao fim?</h2>
         <p class="mt-2 text-white/70">Conte pra nós o que você precisa e avaliamos juntos o melhor caminho.</p>
         <a href={`${base}/contato/`} class="mt-6 inline-block rounded-[--radius-control] bg-emerald-500 px-6 py-3 font-semibold text-navy-900 transition-colors hover:bg-emerald-600">
           Fale conosco
