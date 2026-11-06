@@ -18,8 +18,8 @@ novas sem adaptação — é um negócio diferente.
 - **Marca**: Data10 (mesmo nome do site antigo — site novo, marca mantida).
 - **Quem**: Diego Valois da Mota Ribeiro.
 - **Onde**: João Pessoa/PB — atendimento remoto pro Brasil todo.
-- **Contato**: WhatsApp `+55 83 99959-6225` (número salvo sem máscara como
-  `5583999596225` no código, pra montar link `wa.me`), e-mail
+- **Contato**: WhatsApp `+55 83 98831-9333` (número salvo sem máscara como
+  `5583988319333` no código, pra montar link `wa.me`), e-mail
   `diegovmr@protonmail.com`.
 - **Público**: OSC, empresa (de MEI a grande porte) e pessoa física/coletivo
   sem CNPJ.
