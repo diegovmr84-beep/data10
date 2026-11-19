@@ -18,8 +18,11 @@ novas sem adaptação — é um negócio diferente.
 - **Marca**: Data10 (mesmo nome do site antigo — site novo, marca mantida).
 - **Quem**: Diego Valois da Mota Ribeiro.
 - **Onde**: João Pessoa/PB — atendimento remoto pro Brasil todo.
-- **Contato**: WhatsApp `+55 83 98831-9333` (número salvo sem máscara como
-  `5583988319333` no código, pra montar link `wa.me`), e-mail
+- **Contato**: WhatsApp de atendimento `+55 83 99821-7771` (desde 19/11/2026;
+  é o número do atendimento automático da Data10 na API do WhatsApp, que não
+  recebe ligação; salvo sem máscara como `5583998217771` no código, pra montar
+  link `wa.me`). O número antigo `+55 83 98831-9333` ficou só como telefone
+  no JSON-LD do `BaseLayout.astro` (ligação). E-mail
   `diegovmr@protonmail.com`.
 - **Público**: OSC, empresa (de MEI a grande porte) e pessoa física/coletivo
   sem CNPJ.
