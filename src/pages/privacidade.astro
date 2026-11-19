@@ -13,14 +13,15 @@ import PageHero from '../components/PageHero.astro';
       esta política definitiva.
     </div>
 
-    <p class="text-sm text-ink-500">Última atualização: 19 de outubro de 2026</p>
+    <p class="text-sm text-ink-500">Última atualização: 19 de novembro de 2026</p>
 
     <h2>1. Quem somos</h2>
     <p>
       A Data10 ("nós") é uma consultoria em produção de projetos para captação de recursos, mantida por
-      <strong>Diego Valois da Mota Ribeiro</strong>, pessoa física responsável pelo tratamento dos dados coletados
-      através deste site. Esta política explica quais dados coletamos de visitantes, como usamos essas informações
-      e quais são os seus direitos, em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+      <strong>Diego Valois da Mota Ribeiro</strong>, pessoa física que é a <strong>controladora</strong> dos dados
+      tratados pela Data10 e também o <strong>encarregado</strong> pelo tratamento de dados pessoais (Lei
+      13.709/2018, LGPD, arts. 5º, VI, e 41). Esta política explica quais dados coletamos, para quê, com quem
+      compartilhamos, por quanto tempo guardamos e quais são os seus direitos.
     </p>
 
     <h2>2. Dados de navegação</h2>
@@ -31,12 +32,13 @@ import PageHero from '../components/PageHero.astro';
       navegação.
     </p>
 
-    <h2>3. Dados do formulário de contato</h2>
+    <h2>3. Dados do formulário de contato do site</h2>
     <p>
       A página de contato oferece um formulário que, ao ser enviado, abre o aplicativo de e-mail do próprio
       visitante com os dados preenchidos (nome, e-mail e mensagem). Esses dados são enviados diretamente para o
       e-mail da Data10 pelo cliente de e-mail do visitante, e não passam por nenhum servidor ou banco de dados
-      deste site. Usamos esses dados exclusivamente para responder ao contato realizado.
+      deste site. Usamos esses dados exclusivamente para responder ao contato realizado. O atendimento pelo
+      WhatsApp funciona de outro jeito e está descrito na seção 6.
     </p>
 
     <h2>4. Cookies</h2>
@@ -52,38 +54,121 @@ import PageHero from '../components/PageHero.astro';
       Usamos o <strong>Google Analytics (GA4)</strong> para entender, de forma agregada, como os visitantes usam o
       site, por exemplo, quais páginas são mais lidas e de quais regiões vem o acesso. O Google Analytics utiliza
       cookies e pode coletar dados como endereço IP, tipo de dispositivo e comportamento de navegação, processados
-      pelo Google conforme a
+      pelo Google, inclusive fora do Brasil, conforme a
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidade do Google</a>.
       Esses dados só são coletados após você aceitar cookies no aviso exibido na primeira visita; ao recusar, o
       Google Analytics não é carregado.
     </p>
 
-    <h2>6. WhatsApp</h2>
+    <h2>6. Atendimento e cadastro pelo WhatsApp</h2>
     <p>
-      O botão de WhatsApp deste site abre uma conversa diretamente no aplicativo WhatsApp, com um número de
-      telefone de contato da Data10. Essa conversa é processada pelo WhatsApp/Meta conforme a política de
-      privacidade própria deles. Não temos acesso a nenhum dado adicional além do que você decide compartilhar na
-      própria conversa.
+      <strong>6.1. O que é.</strong> A Data10 atende e faz o cadastro de interessados pelo seu número oficial de
+      atendimento no WhatsApp, ligado à plataforma comercial da Meta (API do WhatsApp). Parte desse atendimento é
+      feita por um assistente automático, que mostra opções e um formulário de cadastro dentro do próprio WhatsApp.
+    </p>
+    <p><strong>6.2. Quais dados coletamos.</strong> Pelo atendimento automático, coletamos:</p>
+    <ul>
+      <li>o seu número de WhatsApp e o nome do seu perfil no aplicativo;</li>
+      <li>nome, cargo ou função (opcional) e e-mail;</li>
+      <li>tipo de interessado (organização da sociedade civil, empresa ou pessoa física/coletivo);</li>
+      <li>nome da organização ou do projeto e CNPJ, quando houver;</li>
+      <li>cidade e UF;</li>
+      <li>área de atuação e os serviços em que você quer ajuda;</li>
+      <li>se já tem projeto e, se tiver, o tema ou objetivo;</li>
+      <li>certificações que a organização tem ou quer obter;</li>
+      <li>o assunto e o melhor horário, quando você pede para falar com o Diego;</li>
+      <li>o registro do seu aceite desta política, com data e hora.</li>
+    </ul>
+    <p>
+      Não pedimos dado pessoal sensível (LGPD, art. 5º, II). Pedimos que você não envie esse tipo de dado, nem
+      documentos de terceiros, pela conversa. Dados da organização (como o CNPJ) podem identificar uma pessoa, por
+      exemplo no caso de MEI, e por isso recebem o mesmo cuidado.
+    </p>
+    <p>
+      <strong>6.3. Para que usamos.</strong> Somente para: (a) identificar quem está pedindo atendimento;
+      (b) entender a necessidade e indicar quais serviços da Data10 podem atender; (c) entrar em contato sobre o seu
+      pedido; e (d) preparar proposta e contrato, se você pedir. Não vendemos nem cedemos os seus dados, e não os
+      usamos para propaganda de terceiros.
+    </p>
+    <p><strong>6.4. Base legal.</strong> Tratamos esses dados com base:</p>
+    <ul>
+      <li>no seu <strong>consentimento</strong>, dado no aceite do formulário antes do envio do cadastro (LGPD, art. 7º, I); e</li>
+      <li>na necessidade de realizar <strong>procedimentos preliminares a um contrato</strong>, quando você pede proposta ou serviço (LGPD, art. 7º, V).</li>
+    </ul>
+    <p>
+      Você pode revogar o consentimento a qualquer momento, de forma gratuita e facilitada (LGPD, art. 8º, § 5º),
+      escrevendo <strong>APAGAR</strong> na conversa (item 6.8).
+    </p>
+    <p><strong>6.5. Onde os dados ficam e quem acessa.</strong></p>
+    <ul>
+      <li>Os dados do cadastro ficam num <strong>banco de dados separado</strong>, no serviço Supabase, em servidor no Brasil (região São Paulo), com acesso restrito à Data10.</li>
+      <li>As ferramentas internas de organização do trabalho da Data10 recebem <strong>somente um código</strong> de cliente (por exemplo, C01), sem nome, contato ou documento.</li>
+      <li>Se você contratar a Data10, os dados do cadastro são usados para preparar o seu contrato e o atendimento.</li>
+      <li>Não compartilhamos os seus dados com órgãos públicos, patrocinadores ou parceiros sem o seu pedido ou a sua autorização, salvo obrigação legal.</li>
+    </ul>
+    <p>
+      <strong>6.6. Operadores.</strong> Para fazer o atendimento, a Data10 usa empresas que tratam dados em seu nome
+      e seguindo as suas instruções (LGPD, arts. 5º, VII, e 39):
+    </p>
+    <ul>
+      <li><strong>Meta Platforms (WhatsApp):</strong> transmite e processa as mensagens da conversa. A Meta também trata dados do seu uso do aplicativo conforme a <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">política de privacidade do WhatsApp</a>.</li>
+      <li><strong>Supabase:</strong> hospeda o banco de dados do cadastro e o programa do atendimento automático, em servidor no Brasil.</li>
+    </ul>
+    <p>
+      <strong>6.7. Transferência internacional.</strong> As mensagens da conversa passam pela Meta, que pode
+      processá-las fora do Brasil. Essa transferência é feita com o seu <strong>consentimento específico e em
+      destaque</strong>, dado no aceite do formulário, que informa o processamento no exterior (LGPD, art. 33, VIII).
+    </p>
+    <p><strong>6.8. Por quanto tempo guardamos e como apagar.</strong></p>
+    <ul>
+      <li>Se você <strong>não</strong> contratar a Data10, os dados do cadastro são apagados automaticamente <strong>12 meses depois do último contato</strong>, ou antes, se você pedir.</li>
+      <li>Se você contratar a Data10, os dados ficam guardados enquanto durar a relação e, depois dela, pelo tempo exigido em lei ou contrato (LGPD, art. 16, I).</li>
+      <li><strong>Para apagar tudo, escreva APAGAR na conversa do WhatsApp.</strong> O cadastro é apagado do banco na hora e o atendimento confirma na conversa. As mensagens que ficam no seu aplicativo e nos sistemas da Meta seguem as regras da Meta.</li>
+    </ul>
+    <p>
+      <strong>6.9. Segurança.</strong> Adotamos medidas técnicas e administrativas para proteger os dados contra
+      acesso não autorizado, perda ou uso indevido (LGPD, art. 46), entre elas: banco de dados separado, acesso
+      restrito com login, chaves de acesso guardadas fora do código, conferência da assinatura das mensagens
+      recebidas da Meta e uso apenas de código de cliente nas ferramentas internas.
     </p>
 
-    <h2>7. Base legal e seus direitos</h2>
+    <h2>7. Base legal dos demais tratamentos</h2>
     <p>
-      Tratamos os dados pessoais com base no seu consentimento (cookies não essenciais) e no legítimo interesse em
-      responder a um contato que você mesmo iniciou. Você pode, a qualquer momento, solicitar informações sobre os
-      dados que possuímos a seu respeito, pedir a correção de dados incorretos ou solicitar a exclusão de dados
-      pessoais, dentro dos limites técnicos e legais aplicáveis. Para isso, entre em contato pelo e-mail indicado
-      na seção 9.
+      Fora do WhatsApp, tratamos dados com base no seu consentimento (cookies não essenciais e Google Analytics) e
+      no legítimo interesse em responder a um contato que você mesmo iniciou pelo formulário do site (LGPD, art. 7º,
+      I e IX).
     </p>
 
-    <h2>8. Alterações nesta política</h2>
+    <h2>8. Seus direitos</h2>
+    <p>Você pode, a qualquer momento e de graça, pedir à Data10 (LGPD, art. 18):</p>
+    <ol>
+      <li>confirmação de que tratamos dados seus;</li>
+      <li>acesso aos seus dados;</li>
+      <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a lei;</li>
+      <li>portabilidade dos dados a outro fornecedor, nos termos da regulamentação;</li>
+      <li>eliminação dos dados tratados com o seu consentimento (no WhatsApp, basta escrever APAGAR);</li>
+      <li>informação sobre com quem compartilhamos os seus dados;</li>
+      <li>informação sobre a possibilidade de não consentir e as consequências: sem o aceite, não é possível fazer o cadastro pelo WhatsApp, mas você pode falar conosco pelo e-mail da seção 10;</li>
+      <li>revogação do consentimento.</li>
+    </ol>
     <p>
-      Esta política pode ser atualizada periodicamente. Recomendamos revisitar esta página com regularidade.
+      Você também pode se opor a tratamento feito sem consentimento em caso de descumprimento da lei (LGPD, art. 18,
+      § 2º) e apresentar reclamação à Autoridade Nacional de Proteção de Dados, a ANPD (LGPD, art. 18, § 1º).
     </p>
 
-    <h2>9. Contato</h2>
+    <h2>9. Alterações nesta política</h2>
     <p>
-      Dúvidas sobre esta política ou solicitações relacionadas aos seus dados podem ser enviadas para
-      <a href="mailto:diegovmr@protonmail.com">diegovmr@protonmail.com</a>.
+      Esta política pode ser atualizada. Mudanças importantes, como uma nova finalidade para os dados, serão
+      informadas com destaque nesta página e, quando for o caso, no próprio atendimento, e você poderá revogar o
+      consentimento se não concordar (LGPD, arts. 8º, § 6º, e 9º, § 2º).
+    </p>
+
+    <h2>10. Contato e encarregado</h2>
+    <p>
+      Pedidos sobre os seus dados e dúvidas sobre esta política: encarregado <strong>Diego Valois da Mota
+      Ribeiro</strong>, pelo e-mail <a href="mailto:diegovmr@protonmail.com">diegovmr@protonmail.com</a> ou pelo
+      WhatsApp de atendimento da Data10.
     </p>
   </article>
 </BaseLayout>
