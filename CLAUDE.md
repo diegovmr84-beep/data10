@@ -157,3 +157,8 @@ Diferente do site antigo, **não existe** fluxo de "pauta diária" nem
 limite de publicação por dia — isso era específico do blog e não se aplica
 mais. Mudança no site institucional pode ser commitada e publicada assim
 que estiver pronta e validada.
+
+## Memória dos projetos (Google Drive)
+- No Google Drive da Data10 (conector Google Drive) existe a pasta **"Memória (Claude e Diego)"**: mapa de serviços (onde fica cada coisa, sem segredos), um arquivo por projeto, ideias e planos, clientes só por código e a linha do tempo.
+- **No começo de um trabalho:** leia `00-LEIA-PRIMEIRO.md` e `projetos/data10-site.md`. **Ao terminar um trabalho grande** (depois do merge): atualize esse arquivo e `linha-do-tempo.md`.
+- Este repositório continua sendo a fonte oficial. Na pasta, nunca senha, token, chave ou dado pessoal de cliente.
