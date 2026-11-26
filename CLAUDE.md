@@ -85,6 +85,14 @@ descrição:
   (`src/pages/blog/index.astro`) lê os metadados (título, resumo, data) de
   `src/data/blog-posts.mjs` — ao criar um post novo, acrescentar uma
   entrada lá também. Post mais recente primeiro na lista.
+- **Posts automáticos (desde 26/11/2026)**: o escritório da Data10
+  (`data10-escritorio`, ADR 0030) publica os posts do Marketing **depois da
+  aprovação do Diego**, gravando direto no `main`: `src/content/blog/<slug>.md`
+  (Markdown com título, descrição, resumo, data, tempo de leitura e capa) e a
+  capa em `src/assets/blog/<slug>.<ext>`. É a única content collection do
+  site (`src/content.config.ts`); a página é `src/pages/blog/[slug].astro` e a
+  listagem junta os dois tipos de post. Não renomear essas pastas sem mudar
+  o escritório junto.
 - **Redirecionamentos**: `src/data/legacy-redirects.mjs` tem as 157 URLs do
   site antigo redirecionadas (via `redirects` do `astro.config.mjs`) pra
   home ou página equivalente. GitHub Pages não tem 301 real — são páginas
