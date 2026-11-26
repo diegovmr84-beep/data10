@@ -35,6 +35,9 @@ novas sem adaptação — é um negócio diferente.
      da consultoria.
 - **Mais um serviço**: sites e aplicativos sob medida (`/sites-aplicativos/`),
   com painel pro próprio cliente gerenciar o conteúdo depois da entrega.
+- **Blog** (`/blog/`, desde 26/11/2026) — pra captar lead e virar link pra
+  divulgar nas redes sociais. Posto conforme surge ideia/novidade, sem
+  calendário fixo.
 
 ### Data10 Recursos — o que o sistema faz (apurado em 19/10/2026, login de teste)
 
@@ -75,8 +78,13 @@ descrição:
   propósito (nenhuma outra branch dispara deploy).
 - **i18n**: nenhum — site só em português. A versão antiga tinha
   pt/en/es; não recriar essa estrutura sem pedido explícito.
-- **Conteúdo**: sem content collections (sem blog, sem Markdown) — cada
-  página é um `.astro` em `src/pages/`, com texto direto no componente.
+- **Conteúdo**: sem content collections, sem Markdown — cada página é um
+  `.astro` em `src/pages/`, com texto direto no componente. O Blog
+  (`/blog/`) segue o mesmo padrão: cada post é um `.astro` em
+  `src/pages/blog/`, usando `src/layouts/BlogPostLayout.astro`. A listagem
+  (`src/pages/blog/index.astro`) lê os metadados (título, resumo, data) de
+  `src/data/blog-posts.mjs` — ao criar um post novo, acrescentar uma
+  entrada lá também. Post mais recente primeiro na lista.
 - **Redirecionamentos**: `src/data/legacy-redirects.mjs` tem as 157 URLs do
   site antigo redirecionadas (via `redirects` do `astro.config.mjs`) pra
   home ou página equivalente. GitHub Pages não tem 301 real — são páginas

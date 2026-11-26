@@ -104,6 +104,7 @@ const structuredData = {
     <link rel="sitemap" href={`${base}/sitemap-index.xml`} />
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <slot name="head" />
 
     <Analytics />
   </head>
