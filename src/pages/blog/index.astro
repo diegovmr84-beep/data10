@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import { posts } from '../../data/blog-posts.mjs';
@@ -35,9 +36,20 @@ function formatDate(date: string) {
             href={`${base}/blog/${post.slug}/`}
             class="group flex flex-col overflow-hidden rounded-[--radius-card] border border-border bg-white shadow-sm transition-shadow hover:shadow-md"
           >
-            <div class="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-navy-900 via-navy-800 to-emerald-700">
-              <span class="font-heading text-xs font-semibold uppercase tracking-widest text-white/70">Data10 · Blog</span>
-            </div>
+            {post.cover ? (
+              <Image
+                src={post.cover}
+                alt={post.coverAlt ?? ''}
+                widths={[400, 640, 900]}
+                sizes="(min-width: 640px) 440px, 100vw"
+                loading="lazy"
+                class="aspect-[16/9] w-full object-cover"
+              />
+            ) : (
+              <div class="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-navy-900 via-navy-800 to-emerald-700">
+                <span class="font-heading text-xs font-semibold uppercase tracking-widest text-white/70">Data10 · Blog</span>
+              </div>
+            )}
             <div class="flex flex-1 flex-col p-6">
               <p class="text-xs font-medium text-ink-500">
                 {formatDate(post.date)} · {post.readingMinutes} min de leitura

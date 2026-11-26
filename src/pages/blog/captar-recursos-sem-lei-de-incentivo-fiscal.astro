@@ -1,5 +1,6 @@
 ---
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import coverImg from '../../assets/blog/equipe-reuniao-dados.jpg';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -8,7 +9,14 @@ const description =
   'Nem todo projeto depende de lei de incentivo fiscal. Conheça patrocínio privado, crowdfunding, renda própria, crédito e investidores: caminhos reais para captar recurso no Brasil.';
 ---
 
-<BlogPostLayout title={title} description={description} date="2026-11-26" readingMinutes={6}>
+<BlogPostLayout
+  title={title}
+  description={description}
+  date="2026-11-26"
+  readingMinutes={6}
+  cover={coverImg}
+  coverAlt="Equipe reunida em mesa de trabalho analisando gráficos e dados em notebook, discutindo o planejamento de um projeto"
+>
   <p>
     Você sabia que é possível captar recurso pro seu projeto mesmo sem lei de incentivo fiscal? É uma pergunta que
     ouvimos bastante: muita gente acha que "captar recurso" é sinônimo de disputar edital de lei de incentivo, e

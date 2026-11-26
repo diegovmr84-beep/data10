@@ -40,6 +40,17 @@ individual, já que vieram prontas, não baixadas por mim direto da página.
   página não tinha foto)
 - **Fonte**: Pexels (busca "corporativo") — Pexels License
 
+## Blog
+
+- **Arquivo**: `src/assets/blog/equipe-reuniao-dados.jpg`
+- **Usada em**: capa do post `src/pages/blog/captar-recursos-sem-lei-de-incentivo-fiscal.astro`
+  (e card correspondente em `src/pages/blog/index.astro`, via
+  `src/data/blog-posts.mjs`)
+- **Fonte**: Pexels — Pexels License. Enviada pelo Diego pelo chat (26/11/2026).
+- Essa mesma imagem também vira `og:image`/`twitter:image` do post (recorte
+  automático 1200×630 via `getImage()` em `BlogPostLayout.astro`), pro preview
+  ficar com foto, título e resumo ao compartilhar o link.
+
 ## Hero da home: ilustração animada, não foto
 
 Depois de testar foto no hero (ver histórico abaixo), o hero passou a usar
