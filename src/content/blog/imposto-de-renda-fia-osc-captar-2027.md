@@ -4,8 +4,8 @@ description: "Entenda o que o ECA diz sobre doações ao Fundo da Criança e do 
 excerpt: "O ECA permite doações dedutíveis do Imposto de Renda ao Fundo da Criança e do Adolescente. Veja o que a lei diz e como a OSC pode se organizar pra 2027."
 date: "2026-11-27"
 readingMinutes: 3
-cover: "../../assets/blog/imposto-de-renda-fia-osc-captar-2027.png"
-coverAlt: "Card Data10: dica de captação sobre doações ao Fundo da Criança e do Adolescente"
+cover: "../../assets/blog/imposto-de-renda-fia-osc-captar-2027.jpg"
+coverAlt: "Mãos de várias pessoas sobre uma mesa, com plantas técnicas, post-its amarelos, lápis e cadernos, em uma reunião de planejamento"
 ---
 
 Fim de ano é a época em que muita gente olha para o Imposto de Renda e pergunta se dá pra destinar uma parte dele a um projeto social. Pra organização da sociedade civil (OSC) que trabalha com crianças e adolescentes, entender essa regra ajuda a planejar a captação de 2027 com antecedência. Este texto resume o que a lei diz, sem promessa de resultado.
